@@ -1,0 +1,35 @@
+{
+  "name": "taburete-website",
+  "version": "1.0.0",
+  "description": "Concept project based in a furniture e-commerce website.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack-w": "webpack --watch",
+    "webpack-b": "webpack",
+    "pug-w": "pug -w ./src/pug -o ./src/html -P"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinimalDesigns/taburete-website.git"
+  },
+  "author": "Pau Ferrer @ Minimal Designs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MinimalDesigns/taburete-website/issues"
+  },
+  "homepage": "https://github.com/MinimalDesigns/taburete-website#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "mini-css-extract-plugin": "^2.7.5",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
+    "webpack": "^5.79.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "pug": "^3.0.2"
+  }
+}
