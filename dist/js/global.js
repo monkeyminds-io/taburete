@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**************************/
 /***/ (() => {
 
-eval("console.log(\"Hellow world!\"); // LOGGER ///////////////////////////////////////////////////////////////\n\n\n//# sourceURL=webpack://taburete-website/./src/js/global.js?");
+eval("\n\n\n//# sourceURL=webpack://taburete-website/./src/js/global.js?");
 
 /***/ })
 

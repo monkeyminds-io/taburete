@@ -1,0 +1,28 @@
+/* Common styles */
+body {
+  position: relative;
+  font-family: $font-copy;
+  font-size: font-size();
+  font-weight: font-weight();
+  color: neutral();
+  background-color: neutral("white");
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+main {
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
