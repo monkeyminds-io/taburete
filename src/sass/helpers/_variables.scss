@@ -34,17 +34,21 @@ $font-sizes: (
   "sm": 12px,
   "md": 16px,
   "lg": 24px,
-  "xl": 40px,
-  "h1-dk": 64px,
-  "h1-tb": 48px,
-  "h2-dk": 32px,
-  "h3-dk": 24px,
+  "xl": 32px,
+  "h1": 48px,
+  "h2": 32px,
+  "h3": 24px,
 );
 
 $font-weights: (
   "light": 300,
   "regular": 400,
   "bold": 600,
+);
+
+$line-heights: (
+  "heading": 1.2,
+  "copy": 1.6,
 );
 
 $directions: "top", "right", "bottom", "left";

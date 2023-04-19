@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Taburete | Where your home gets the best furniture and becomes a minimalistic sanctuary.">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="./assets/img/logo/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo/favicon.ico" type="image/x-icon">
     <title>Taburete | Your shop for home</title>
     <!-- CSS Styles-->
     <link rel="stylesheet" href="./css/styles.css">
     <!-- JavaScript Frontend code-->
-    <script type="text/javascript" src="./js/global.js" defer></script>
+    <script type="module" src="./js/global.js" defer></script>
   </head>
   <body>
-    <h1>Hello world</h1>
-    <h2>He</h2>
+    <header>
+      <nav class="section section--nav" data-component="navbar">
+        <div class="container container--nav"><a class="nav__brand" href="/"><img src="./img/logo/primary.svg" alt="Taburete logo"></a>
+          <div class="nav__wrapper"><a class="nav__cart-icon" href="#"><img src="./img/icons/cart-icon.svg" alt="Cart icon"></a>
+            <div class="nav__burger">
+              <div class="burger__line top"></div>
+              <div class="burger__line middle"></div>
+              <div class="burger__line bottom"></div>
+            </div>
+            <div class="nav__menu"><a class="nav__link" href="#">Shop by room</a><a class="nav__link" href="#">Contact us</a><a class="nav__link" href="#">Register / Login</a><a class="nav__link" href="#">Our blog</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
   </body>
 </html>

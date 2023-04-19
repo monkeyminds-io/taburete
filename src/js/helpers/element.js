@@ -1,0 +1,3 @@
+const element = {};
+
+export { element };

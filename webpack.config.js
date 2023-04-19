@@ -15,7 +15,7 @@ const paths = {
   dist: {
     js: "./js/",
     css: "./css/",
-    img: "./assets/img/",
+    img: "./img/",
     html: "./",
   },
 };
@@ -27,8 +27,9 @@ module.exports = {
     // [filename]: paths.src.views + '[filename].js'
   },
   output: {
-    filename: paths.dist.js + "[name].js",
     path: path.resolve(__dirname, "./dist"),
+    filename: paths.dist.js + "[name].js",
+    publicPath: "/",
   },
   module: {
     rules: [
