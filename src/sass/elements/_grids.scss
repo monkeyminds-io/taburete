@@ -1,0 +1,45 @@
+/* Grids */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  width: 100%;
+
+  &--4-columns {
+    gap: 16px;
+  }
+
+  // RESPONSIVENESS ////////////////
+
+  // Landscape
+  @include responsive(xs) {
+    &--4-columns {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  // Tablet
+  @include responsive(sm) {
+    &--3-columns {
+      grid-template-columns: 1fr 1fr;
+    }
+    &--4-columns {
+      gap: 24px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  // Desktop
+  @include responsive(md) {
+    &--2-columns {
+      grid-template-columns: 1fr 1fr;
+    }
+    &--3-columns {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &--4-columns {
+      gap: 32px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}

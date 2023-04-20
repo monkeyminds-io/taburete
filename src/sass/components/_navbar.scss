@@ -39,38 +39,38 @@
       left: 0px;
       background-color: neutral("black");
       transition: background-color 0.32s ease-in-out,
-        transform 0.32s ease-in-out, opacity 0.32s ease-in-out;
+        transform 0.32s ease-in-out, opacity 0.32s ease-in-out,
+        top 0.32s ease-in-out;
 
       &.top {
         top: 6px;
-
-        &.open {
-          transform: rotateZ(45deg);
-        }
       }
 
       &.middle {
         top: 14px;
-
-        &.open {
-          transform: translateX(32px);
-          opacity: 0;
-        }
       }
 
       &.bottom {
         top: 22px;
-
-        &.open {
-          transform: rotateZ(-45deg);
-        }
       }
+    }
 
-      &.top,
-      &.middle,
-      &.bottom {
-        &.open {
+    &.open {
+      .burger__line {
+        &.top,
+        &.middle,
+        &.bottom {
           top: 14px;
+        }
+        &.top {
+          transform: rotateZ(45deg);
+        }
+        &.middle {
+          transform: translateX(32px);
+          opacity: 0;
+        }
+        &.bottom {
+          transform: rotateZ(-45deg);
         }
       }
     }

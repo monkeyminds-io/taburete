@@ -11,12 +11,14 @@ const paths = {
     sass: "./src/sass/",
     img: "./src/img/",
     html: "./src/html/",
+    data: "./src/data/",
   },
   dist: {
     js: "./js/",
     css: "./css/",
     img: "./img/",
     html: "./",
+    data: "./data/",
   },
 };
 
@@ -53,6 +55,10 @@ module.exports = {
         {
           from: paths.src.img,
           to: paths.dist.img,
+        },
+        {
+          from: paths.src.data,
+          to: paths.dist.data,
         },
       ],
     }),

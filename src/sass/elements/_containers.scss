@@ -1,0 +1,52 @@
+.container {
+  padding: 0 16px;
+  width: 100%;
+  max-width: 1280px;
+
+  /* RESPONSIVENESS */
+  // Landscape
+  @include responsive(xs) {
+    padding: 0 24px;
+  }
+
+  // Tablet
+  @include responsive(sm) {
+    padding: 0 40px;
+  }
+
+  // Desktop
+  @include responsive(md) {
+    padding: 0 64px;
+  }
+
+  &--nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &--flex {
+    display: flex;
+    /* RESPONSIVENESS */
+    // Portrait
+    @include responsive(2xs) {
+      &.portrait--vertical {
+        flex-direction: column;
+      }
+    }
+    // Landscape
+    @include responsive(xs) {
+    }
+
+    // Tablet
+    @include responsive(sm) {
+      &.tablet--horizontal {
+        flex-direction: row;
+      }
+    }
+
+    // Desktop
+    @include responsive(md) {
+    }
+  }
+}

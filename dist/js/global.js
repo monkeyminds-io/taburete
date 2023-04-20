@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"nav\": () => (/* binding */ nav)\n/* harmony export */ });\n// Testing function\nconst nav = function (navbar) {\n  console.log(navbar); // LOGGER ///////////////////////////////////////////////////////////////\n};\n\n\n\n\n//# sourceURL=webpack://taburete-website/./src/js/components/navbar.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"openMenu\": () => (/* binding */ openMenu),\n/* harmony export */   \"setCurrent\": () => (/* binding */ setCurrent)\n/* harmony export */ });\n/* harmony import */ var _helpers_page_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers/page.js */ \"./src/js/helpers/page.js\");\n// Imports\n\n\n/**\n * Used to open the navbar menu\n * @param {HTMLElement} navbar\n */\nconst openMenu = function (navbar) {\n  const burger = navbar.querySelector('[data-element=\"nav-burger\"]');\n  const menu = navbar.querySelector('[data-element=\"nav-menu\"]');\n  const clickables = [burger, ...burger.children];\n  navbar.onclick = (e) => {\n    clickables.forEach((clicable) => {\n      if (e.target === clicable) {\n        burger.classList.toggle(\"open\");\n        menu.classList.toggle(\"open\");\n      }\n    });\n  };\n};\n\n/**\n * Used to set the current page in the navbar menu\n * @param {HTMLElement} navbar\n */\nconst setCurrent = function (navbar) {\n  const pages = [\"shop\", \"contact-us\", \"register-login\", \"blog\"];\n  pages.forEach((page) => {\n    if ((0,_helpers_page_js__WEBPACK_IMPORTED_MODULE_0__.getPage)() === page) {\n      navbar.querySelector(`[data-page=\"${page}\"]`).classList.add(\"current\");\n    }\n  });\n};\n\n// Exports\n\n\n\n//# sourceURL=webpack://taburete-website/./src/js/components/navbar.js?");
 
 /***/ }),
 
@@ -36,17 +36,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_text_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module-text.js */ \"./src/js/module-text.js\");\n/* harmony import */ var _components_navbar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/navbar.js */ \"./src/js/components/navbar.js\");\n// TEST\n\n(0,_module_text_js__WEBPACK_IMPORTED_MODULE_0__.test)();\n\n// NAVBAR FUNCTIONALITY\n\nconst navbar = document.querySelector('[data-component=\"navbar\"]');\n\n(0,_components_navbar_js__WEBPACK_IMPORTED_MODULE_1__.nav)(navbar); // Testing conection to navbar.js\n\n\n//# sourceURL=webpack://taburete-website/./src/js/global.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_navbar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/navbar.js */ \"./src/js/components/navbar.js\");\n// NAVBAR FUNCTIONALITY\n// Imports\n\n// DOM elements\nconst navbar = document.querySelector('[data-component=\"navbar\"]');\n// Logic\n(0,_components_navbar_js__WEBPACK_IMPORTED_MODULE_0__.openMenu)(navbar);\n(0,_components_navbar_js__WEBPACK_IMPORTED_MODULE_0__.setCurrent)(navbar);\nwindow.onscroll = () => {\n  window.scrollY > 0\n    ? navbar.classList.add(\"white\")\n    : navbar.classList.remove(\"white\");\n};\n\n\n//# sourceURL=webpack://taburete-website/./src/js/global.js?");
 
 /***/ }),
 
-/***/ "./src/js/module-text.js":
-/*!*******************************!*\
-  !*** ./src/js/module-text.js ***!
-  \*******************************/
+/***/ "./src/js/helpers/page.js":
+/*!********************************!*\
+  !*** ./src/js/helpers/page.js ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"test\": () => (/* binding */ test)\n/* harmony export */ });\nconst test = function () {\n  console.log(\"Hi from the module test!!\"); // LOGGER ///////////////////////////////////////////////////////////////\n};\n\n\n\n\n//# sourceURL=webpack://taburete-website/./src/js/module-text.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getPage\": () => (/* binding */ getPage)\n/* harmony export */ });\nconst getPage = function () {\n  const url = window.location.href;\n  const page = url.split(\"/\")[url.split(\"/\").length - 1].split(\".\")[0];\n  return page;\n};\n\n\n\n\n//# sourceURL=webpack://taburete-website/./src/js/helpers/page.js?");
 
 /***/ })
 

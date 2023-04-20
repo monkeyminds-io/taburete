@@ -1,0 +1,17 @@
+.flex {
+  display: flex;
+
+  &--vertical {
+    flex-direction: column;
+
+    &.align-items {
+      &--start {
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &--horizontal {
+    flex-direction: row;
+  }
+}

@@ -44,3 +44,12 @@
     @return null;
   }
 }
+
+// Font line calculation
+@function line-height($key: "copy") {
+  @if type-of($key) == string {
+    @return map-get($line-heights, $key);
+  } @else {
+    @return null;
+  }
+}

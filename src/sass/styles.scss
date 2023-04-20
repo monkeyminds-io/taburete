@@ -9,9 +9,17 @@
 // Globals
 @import "./globals/resets";
 @import "./globals/commons";
+@import "./globals/margins";
+@import "./globals/widths";
+
+// Elements
+@import "./elements/sections";
+@import "./elements/containers";
+@import "./elements/flex";
+@import "./elements/grids";
+@import "./elements/typography";
+@import "./elements/buttons";
+@import "./elements/images";
 
 // Components
-@import "./components/sections";
-@import "./components/containers";
-
 @import "./components/navbar";

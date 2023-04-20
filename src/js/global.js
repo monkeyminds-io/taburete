@@ -1,9 +1,13 @@
-// TEST
-import { test } from "./module-text.js";
-test();
-
 // NAVBAR FUNCTIONALITY
-import { nav } from "./components/navbar.js";
+// Imports
+import { openMenu, setCurrent } from "./components/navbar.js";
+// DOM elements
 const navbar = document.querySelector('[data-component="navbar"]');
-
-nav(navbar); // Testing conection to navbar.js
+// Logic
+openMenu(navbar);
+setCurrent(navbar);
+window.onscroll = () => {
+  window.scrollY > 0
+    ? navbar.classList.add("white")
+    : navbar.classList.remove("white");
+};

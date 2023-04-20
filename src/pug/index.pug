@@ -15,4 +15,17 @@ html(lang="en")
     body
         header
             include includes/navbar.pug
+        main
+            // Hero section
+            section.section.section--hero
+                .container.container--flex.portrait--vertical.tablet--horizontal
+                    .flex.flex--vertical.align-items--start.width--tb--md-md
+                        h1 Minimal furniture for everyday
+                        p.text--neutral--dark.margin--bottom--md.
+                            Your home is your sanctuary, your peaceful oasis, where you go to rest your mind and body. Our furniture will give you peace, serenity and comfort.
+                        a.button.button--primary(href="./shop.html") Shop online now
+                    .image__wrapper.hero
+                        // Image from Unsplash License Free image by Inside Weather
+                        img.image.hero(src="./img/hero-image.png", alt="Photo by Inside Weather on Unsplash")
 
+            
