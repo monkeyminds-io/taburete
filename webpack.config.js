@@ -11,12 +11,14 @@ const paths = {
     sass: "./src/sass/",
     img: "./src/img/",
     html: "./src/html/",
+    data: "./src/data/",
   },
   dist: {
     js: "./js/",
     css: "./css/",
-    img: "./assets/img/",
+    img: "./img/",
     html: "./",
+    data: "./data/",
   },
 };
 
@@ -27,8 +29,9 @@ module.exports = {
     // [filename]: paths.src.views + '[filename].js'
   },
   output: {
-    filename: paths.dist.js + "[name].js",
     path: path.resolve(__dirname, "./dist"),
+    filename: paths.dist.js + "[name].js",
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -52,6 +55,10 @@ module.exports = {
         {
           from: paths.src.img,
           to: paths.dist.img,
+        },
+        {
+          from: paths.src.data,
+          to: paths.dist.data,
         },
       ],
     }),

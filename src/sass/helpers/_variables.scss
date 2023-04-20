@@ -1,0 +1,72 @@
+$breakpoints: (
+  2xs: 320px,
+  xs: 568px,
+  sm: 768px,
+  md: 1024px,
+);
+
+$brand-colors: (
+  "primary": #d25324,
+  "secondary": #f9d5c9,
+  "accent": #58afce,
+  "overlay": rgba(88, 175, 206, 0.24),
+);
+
+$neutral-colors: (
+  "black": #28363a,
+  "dark": #596c73,
+  "light": #adbfc6,
+  "lighter": #ccd8dd,
+  "even-lighter": #eef5f8,
+  "white": #f5fcff,
+);
+
+$semantic-colors: (
+  "success": #7ae3aa,
+  "error": #f03063,
+  "warning": #ffc63b,
+  "info": #4da1f7,
+);
+
+$font-copy: "Poppins", sans-serif;
+$font-sizes: (
+  "xs": 8px,
+  "sm": 12px,
+  "md": 16px,
+  "lg": 24px,
+  "xl": 32px,
+  "h1": 48px,
+  "h2": 32px,
+  "h3": 24px,
+);
+
+$font-weights: (
+  "light": 300,
+  "regular": 400,
+  "bold": 600,
+);
+
+$line-heights: (
+  "heading": 1.2,
+  "copy": 1.6,
+);
+
+$directions: "top", "right", "bottom", "left";
+
+$levels: (
+  "sm": 1,
+  "md": 10,
+  "lg": 100,
+);
+
+$spacers: (
+  "3xs": 8px,
+  "2xs": 16px,
+  "xs": 24px,
+  "sm": 32px,
+  "md": 40px,
+  "lg": 48px,
+  "xl": 56px,
+  "2xl": 64px,
+  "3xl": 72px,
+);

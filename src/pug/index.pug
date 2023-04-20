@@ -4,8 +4,28 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content="Taburete | Where your home gets the best furniture and becomes a minimalistic sanctuary.")
+        // Favicon
+        link(rel="shortcut icon", href="./img/logo/favicon.ico", type="image/x-icon")
         title Taburete | Your shop for home
+        // CSS Styles
         link(rel="stylesheet" href="./css/styles.css")
-        script(type="text/javascript", src="./js/global.js", defer)
+        // JavaScript Frontend code
+        script(type="module", src="./js/global.js", defer)
     body
-        h1 Hello world!
+        header
+            include includes/navbar.pug
+        main
+            // Hero section
+            section.section.section--hero
+                .container.container--flex.portrait--vertical.tablet--horizontal
+                    .flex.flex--vertical.align-items--start.width--tb--md-md
+                        h1 Minimal furniture for everyday
+                        p.text--neutral--dark.margin--bottom--md.
+                            Your home is your sanctuary, your peaceful oasis, where you go to rest your mind and body. Our furniture will give you peace, serenity and comfort.
+                        a.button.button--primary(href="./shop.html") Shop online now
+                    .image__wrapper.hero
+                        // Image from Unsplash License Free image by Inside Weather
+                        img.image.hero(src="./img/hero-image.png", alt="Photo by Inside Weather on Unsplash")
+
+            

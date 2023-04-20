@@ -1,0 +1,45 @@
+.image__wrapper {
+  overflow: hidden;
+
+  &.hero {
+    display: block;
+    flex: none;
+    position: relative;
+    overflow: visible;
+    margin-top: 32px;
+    width: 100%;
+    height: 320px;
+    /* RESPONSIVENESS */
+    // Landscape
+    @include responsive(xs) {
+    }
+
+    // Tablet
+    @include responsive(sm) {
+      margin: 0;
+      width: 400px;
+      height: auto;
+    }
+
+    // Desktop
+    @include responsive(md) {
+      width: 60%;
+      height: 480px;
+    }
+  }
+}
+
+.image {
+  width: 120%;
+
+  &.hero {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    // Desktop
+    @include responsive(md) {
+      width: 160%;
+    }
+  }
+}

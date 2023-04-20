@@ -1,0 +1,40 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  width: 100%;
+  font-family: $font-copy;
+  font-style: normal;
+  font-weight: font-weight("bold");
+  font-size: font-size("md");
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.32s ease-in-out, background-color 0.32s ease-in-out;
+
+  /* RESPONSIVENESS */
+  // Landscape
+  @include responsive(xs) {
+  }
+
+  // Tablet
+  @include responsive(sm) {
+    width: auto;
+  }
+
+  // Desktop
+  @include responsive(md) {
+  }
+
+  &--primary {
+    color: neutral("white");
+    background-color: brand("primary");
+
+    &:hover {
+      color: brand("primary");
+      background-color: brand("secondary");
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.width {
+  /* RESPONSIVENESS */
+  // Landscape
+  @include responsive(xs) {
+  }
+
+  // Tablet
+  @include responsive(sm) {
+    &--tb {
+      &--md {
+        &-md {
+          width: 480px;
+        }
+      }
+    }
+  }
+
+  // Desktop
+  @include responsive(md) {
+  }
+}

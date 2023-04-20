@@ -1,0 +1,126 @@
+.nav {
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    isolation: isolate;
+  }
+
+  &__cart-icon {
+    padding: 8px;
+    background-color: transparent;
+    transition: background-color 0.32s ease-in-out;
+
+    &:hover {
+      background-color: brand("secondary");
+    }
+  }
+
+  &__burger {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+    .burger__line {
+      position: absolute;
+      width: 32px;
+      height: 4px;
+      left: 0px;
+      background-color: neutral("black");
+      transition: background-color 0.32s ease-in-out,
+        transform 0.32s ease-in-out, opacity 0.32s ease-in-out,
+        top 0.32s ease-in-out;
+
+      &.top {
+        top: 6px;
+      }
+
+      &.middle {
+        top: 14px;
+      }
+
+      &.bottom {
+        top: 22px;
+      }
+    }
+
+    &.open {
+      .burger__line {
+        &.top,
+        &.middle,
+        &.bottom {
+          top: 14px;
+        }
+        &.top {
+          transform: rotateZ(45deg);
+        }
+        &.middle {
+          transform: translateX(32px);
+          opacity: 0;
+        }
+        &.bottom {
+          transform: rotateZ(-45deg);
+        }
+      }
+    }
+
+    &:hover {
+      .burger__line {
+        background-color: brand("primary");
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    left: 100%;
+    top: 80px;
+    background-color: neutral("white");
+    transition: transform 0.32s ease-in-out;
+
+    &.open {
+      transform: translateX(-100%);
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 24px;
+    width: 100%;
+    font-family: $font-copy;
+    font-style: normal;
+    font-weight: font-weight("light");
+    font-size: font-size("xl");
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color 0.32s ease-in-out, background-color 0.32s ease-in-out;
+
+    &.current {
+      color: brand("primary");
+    }
+
+    &:hover {
+      color: brand("primary");
+      background-color: brand("secondary");
+    }
+  }
+}
