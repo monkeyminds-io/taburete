@@ -27,5 +27,12 @@ html(lang="en")
                     .image__wrapper.hero
                         // Image from Unsplash License Free image by Inside Weather
                         img.image.hero(src="./img/hero-image.png", alt="Photo by Inside Weather on Unsplash")
-
+            // Categories section
+            section.section
+                .container.container--center
+                    h2.text--center Categories
+                    include includes/category-grid.pug
+            // Testimonials section
+            include includes/testimonials-section.pug
+            
             

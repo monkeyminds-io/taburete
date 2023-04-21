@@ -1,4 +1,4 @@
-/* Grids */
+/* LAYOUTS - GRIDS */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -20,6 +20,9 @@
 
   // Tablet
   @include responsive(sm) {
+    &--2-columns {
+      grid-template-columns: 1fr 1fr;
+    }
     &--3-columns {
       grid-template-columns: 1fr 1fr;
     }
@@ -31,9 +34,6 @@
 
   // Desktop
   @include responsive(md) {
-    &--2-columns {
-      grid-template-columns: 1fr 1fr;
-    }
     &--3-columns {
       grid-template-columns: 1fr 1fr 1fr;
     }

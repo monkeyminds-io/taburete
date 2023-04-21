@@ -1,0 +1,67 @@
+//- The testimonials section
+section.section
+    .container.container--center
+        h2.text--center Testimonials
+        .slider.slider--testimonials(data-component="slider")
+            .slider__mask(data-element="slider-mask")
+                .card.card--testimonial
+                    .card--testimonial__client
+                        .client__rating
+                            img(src="./img/icons/star-icon.svg")
+                            img(src="./img/icons/star-icon.svg")
+                            img(src="./img/icons/star-icon.svg")
+                            img(src="./img/icons/star-icon.svg")
+                            img(src="./img/icons/star-icon.svg")
+                        .client__info
+                            .client__avatar
+                                img(src="./img/clients/jane-cooper.png")
+                            .client__id
+                                p Jane Cooper
+                                .job-title Medical Assistant
+                    .card--testimonial__review
+                        p.
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis turpis nisi, justo, integer dignissim ornare leo euismod ac."
+                .card.card--testimonial
+                    .card--testimonial__client
+                        .client__rating
+                            img(src="./img/icons/star-icon.svg")
+                            img(src="./img/icons/star-icon.svg")
+                            img(src="./img/icons/star-icon.svg")
+                            img(src="./img/icons/star-icon.svg")
+                            img(src="./img/icons/star-icon.svg")
+                        .client__info
+                            .client__avatar
+                                img(src="./img/clients/guy-hawkins.png")
+                            .client__id
+                                p Guy Hawkins
+                                .job-title Marketing Coordinator
+                    .card--testimonial__review
+                        p.
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis turpis nisi, justo, integer dignissim ornare leo euismod ac."
+                .card.card--testimonial
+                    .card--testimonial__client
+                        .client__rating
+                            img(src="./img/icons/star-icon.svg")
+                            img(src="./img/icons/star-icon.svg")
+                            img(src="./img/icons/star-icon.svg")
+                            img(src="./img/icons/star-icon.svg")
+                            img(src="./img/icons/star-icon.svg")
+                        .client__info
+                            .client__avatar
+                                img(src="./img/clients/jenny-wilson.png")
+                            .client__id
+                                p Jenny Wilson
+                                .job-title Dog Trainer
+                    .card--testimonial__review
+                        p.
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis turpis nisi, justo, integer dignissim ornare leo euismod ac."
+            .slider__dots
+                .dot.active(data-element="dot", data-is-active="true")
+                .dot(data-element="dot", data-is-active="false")
+                .dot(data-element="dot", data-is-active="false")
+            .slider__nav
+                a.button.button--slider-nav.disabled(href="#", data-element="button-previous", disabled)
+                    img(src="./img/icons/arrow-left-icon.svg")
+                a.button.button--slider-nav(href="#", data-element="button-next")
+                    img(src="./img/icons/arrow-right-icon.svg")
+
