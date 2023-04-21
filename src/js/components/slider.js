@@ -10,43 +10,65 @@
  */
 // VARIABLES ////////////////
 let currentSlide = 0;
-let increment = 0;
+let currentIncrement = 0;
+let lastSlide;
+let increment;
 
 // FUNCTIONS ////////////////
 const slideMask = (mask) => {
-  mask.style.transform = `translateX(${increment}px)`;
+  mask.style.transform = `translateX(${currentIncrement}px)`;
 };
 
-const setPreviousClickEvent = (mask, previous) => {
+const enableButton = (button) => {
+  button.classList.remove("disabled");
+};
+
+const disableButton = (button) => {
+  button.classList.add("disabled");
+};
+
+const setCurrentDot = (dots) => {
+  dots.forEach((dot, index) => {
+    dot.classList.remove("active");
+    dot.setAttribute("data-is-active", "false");
+    if (index === currentSlide) {
+      dot.classList.add("active");
+      dot.setAttribute("data-is-active", "true");
+    }
+  });
+};
+
+const setPreviousClickEvent = (mask, previous, dots) => {
   const clickables = [previous, ...previous.children];
   previous.onclick = (e) => {
     e.preventDefault();
-    e.preventDefault();
-    increment = increment + (480 + 32); // TODO Make numbers dynamic
+    currentIncrement = currentIncrement + increment;
     clickables.forEach((clickable) => {
       if (e.target === clickable) {
         slideMask(mask);
+        currentSlide--;
+        enableButton(previous.nextElementSibling);
+        currentSlide === 0 ? disableButton(previous) : null;
+        setCurrentDot(dots);
       }
     });
-    // TODO disable button if currentSlide = 0
-    // TODO Undisable prev btn if currentSlide > 0
-    currentSlide--;
   };
 };
 
-const setNextClickEvent = (mask, next) => {
+const setNextClickEvent = (mask, next, dots) => {
   const clickables = [next, ...next.children];
   next.onclick = (e) => {
     e.preventDefault();
-    increment = increment - (480 + 32); // TODO Make numbers dynamic
+    currentIncrement = currentIncrement - increment;
     clickables.forEach((clickable) => {
       if (e.target === clickable) {
         slideMask(mask);
+        currentSlide++;
+        enableButton(next.previousElementSibling);
+        currentSlide === lastSlide ? disableButton(next) : null;
+        setCurrentDot(dots);
       }
     });
-    // TODO disable button if currentSlide = 2
-    // TODO Undisable next btn if currentSlide < 2
-    currentSlide++;
   };
 };
 
@@ -55,9 +77,13 @@ export const initSliders = () => {
   const sliders = document.querySelectorAll('[data-component="slider"]');
   sliders.forEach((slider) => {
     const mask = slider.querySelector('[data-element="slider-mask"]');
+    const slides = mask.children;
+    const dots = slider.querySelectorAll('[data-element="dot"]');
     const previous = slider.querySelector('[data-element="button-previous"]');
     const next = slider.querySelector('[data-element="button-next"]');
-    setPreviousClickEvent(mask, previous);
-    setNextClickEvent(mask, next);
+    lastSlide = slides.length - 1;
+    increment = slides[0].offsetWidth + 32;
+    setPreviousClickEvent(mask, previous, dots);
+    setNextClickEvent(mask, next, dots);
   });
 };

@@ -49,5 +49,6 @@
   &.disabled {
     background-color: neutral("light");
     cursor: auto;
+    pointer-events: none;
   }
 }

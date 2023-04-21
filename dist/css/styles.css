@@ -398,6 +398,7 @@ h2 {
 .button.disabled {
   background-color: #adbfc6;
   cursor: auto;
+  pointer-events: none;
 }
 
 .image__wrapper {
