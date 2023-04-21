@@ -1,3 +1,4 @@
+/* LAYOUTS - CONTAINERS */
 .container {
   padding: 0 16px;
   width: 100%;
@@ -48,5 +49,11 @@
     // Desktop
     @include responsive(md) {
     }
+  }
+
+  &--center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

@@ -1,0 +1,40 @@
+/* COMPONENTS - SLIDERS */
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+
+  &__mask {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+    width: fit-content;
+    transition: transform 0.32s ease-in-out;
+  }
+
+  &__dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: neutral("lighter");
+
+      &.active {
+        background-color: brand("primary");
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+}

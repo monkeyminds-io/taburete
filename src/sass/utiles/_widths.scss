@@ -1,3 +1,4 @@
+/* UTILES - WITHS */
 .width {
   /* RESPONSIVENESS */
   // Landscape
@@ -17,5 +18,9 @@
 
   // Desktop
   @include responsive(md) {
+  }
+
+  &--max--md-4xl {
+    max-width: 800px;
   }
 }

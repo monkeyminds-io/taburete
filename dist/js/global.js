@@ -20,6 +20,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./src/js/components/category-card.js":
+/*!********************************************!*\
+  !*** ./src/js/components/category-card.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initCategoryCards\": () => (/* binding */ initCategoryCards)\n/* harmony export */ });\n/**\n * category-card.js\n * ----------------\n * DESCRIPTION:\n * This file contains the hovering event of the category cards.\n *\n * AUTHOR: Pau Ferrer @ Minimal Designs\n * CREATED AT: 20/04/2023\n * LAST UPDATE: 20/04/2023\n */\n// FUNCTIONS ////////////////\nconst setMouseOverEvent = (card) => {\n  const overlay = card.querySelector('[data-element=\"ovelay\"]');\n  const background = card.querySelector('[data-element=\"background\"]');\n  card.onmouseover = (e) => {\n    overlay.classList.add(\"hovering\");\n    background.classList.add(\"hovering\");\n  };\n};\n\nconst setMouseOutEvent = (card) => {\n  const overlay = card.querySelector('[data-element=\"ovelay\"]');\n  const background = card.querySelector('[data-element=\"background\"]');\n  card.onmouseout = (e) => {\n    overlay.classList.remove(\"hovering\");\n    background.classList.remove(\"hovering\");\n  };\n};\n\n// EXPORTS ////////////////\nconst initCategoryCards = () => {\n  // DOM Elements\n  const categoryCards = document.querySelectorAll(\n    '[data-component=\"category-card\"]'\n  );\n\n  // Logic\n  categoryCards.forEach((card) => {\n    setMouseOverEvent(card);\n    setMouseOutEvent(card);\n  });\n};\n\n\n//# sourceURL=webpack://taburete-website/./src/js/components/category-card.js?");
+
+/***/ }),
+
 /***/ "./src/js/components/navbar.js":
 /*!*************************************!*\
   !*** ./src/js/components/navbar.js ***!
@@ -30,13 +40,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/js/components/slider.js":
+/*!*************************************!*\
+  !*** ./src/js/components/slider.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initSliders\": () => (/* binding */ initSliders)\n/* harmony export */ });\n/**\n * slider.js\n * ----------------\n * DESCRIPTION:\n * This file contains the functionality for the slider to slide.\n *\n * AUTHOR: Pau Ferrer @ Minimal Designs\n * CREATED AT: 20/04/2023\n * LAST UPDATE: 20/04/2023\n */\n// VARIABLES ////////////////\nlet currentSlide = 0;\nlet increment = 0;\n\n// FUNCTIONS ////////////////\nconst slideMask = (mask) => {\n  mask.style.transform = `translateX(${increment}px)`;\n};\n\nconst setPreviousClickEvent = (mask, previous) => {\n  const clickables = [previous, ...previous.children];\n  previous.onclick = (e) => {\n    e.preventDefault();\n    e.preventDefault();\n    increment = increment + (480 + 32); // TODO Make numbers dynamic\n    clickables.forEach((clickable) => {\n      if (e.target === clickable) {\n        slideMask(mask);\n      }\n    });\n    // TODO disable button if currentSlide = 0\n    // TODO Undisable prev btn if currentSlide > 0\n    currentSlide--;\n  };\n};\n\nconst setNextClickEvent = (mask, next) => {\n  const clickables = [next, ...next.children];\n  next.onclick = (e) => {\n    e.preventDefault();\n    increment = increment - (480 + 32); // TODO Make numbers dynamic\n    clickables.forEach((clickable) => {\n      if (e.target === clickable) {\n        slideMask(mask);\n      }\n    });\n    // TODO disable button if currentSlide = 2\n    // TODO Undisable next btn if currentSlide < 2\n    currentSlide++;\n  };\n};\n\n// EXPORTS ////////////////\nconst initSliders = () => {\n  const sliders = document.querySelectorAll('[data-component=\"slider\"]');\n  sliders.forEach((slider) => {\n    const mask = slider.querySelector('[data-element=\"slider-mask\"]');\n    const previous = slider.querySelector('[data-element=\"button-previous\"]');\n    const next = slider.querySelector('[data-element=\"button-next\"]');\n    setPreviousClickEvent(mask, previous);\n    setNextClickEvent(mask, next);\n  });\n};\n\n\n//# sourceURL=webpack://taburete-website/./src/js/components/slider.js?");
+
+/***/ }),
+
 /***/ "./src/js/global.js":
 /*!**************************!*\
   !*** ./src/js/global.js ***!
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_navbar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/navbar.js */ \"./src/js/components/navbar.js\");\n// NAVBAR FUNCTIONALITY\n// Imports\n\n// DOM elements\nconst navbar = document.querySelector('[data-component=\"navbar\"]');\n// Logic\n(0,_components_navbar_js__WEBPACK_IMPORTED_MODULE_0__.openMenu)(navbar);\n(0,_components_navbar_js__WEBPACK_IMPORTED_MODULE_0__.setCurrent)(navbar);\nwindow.onscroll = () => {\n  window.scrollY > 0\n    ? navbar.classList.add(\"white\")\n    : navbar.classList.remove(\"white\");\n};\n\n\n//# sourceURL=webpack://taburete-website/./src/js/global.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_navbar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/navbar.js */ \"./src/js/components/navbar.js\");\n/* harmony import */ var _components_category_card_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/category-card.js */ \"./src/js/components/category-card.js\");\n/* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/slider.js */ \"./src/js/components/slider.js\");\n// NAVBAR FUNCTIONALITY\n// Imports\n\n// DOM elements\nconst navbar = document.querySelector('[data-component=\"navbar\"]');\n// Logic\n(0,_components_navbar_js__WEBPACK_IMPORTED_MODULE_0__.openMenu)(navbar);\n(0,_components_navbar_js__WEBPACK_IMPORTED_MODULE_0__.setCurrent)(navbar);\nwindow.onscroll = () => {\n  window.scrollY > 0\n    ? navbar.classList.add(\"white\")\n    : navbar.classList.remove(\"white\");\n};\n\n// CATEGORY CARDS - HOVER EVENT ////////////////\n\n(0,_components_category_card_js__WEBPACK_IMPORTED_MODULE_1__.initCategoryCards)();\n\n// SLIDERS FUNCTIONALITY ////////////////\n\n(0,_components_slider_js__WEBPACK_IMPORTED_MODULE_2__.initSliders)();\n\n\n//# sourceURL=webpack://taburete-website/./src/js/global.js?");
 
 /***/ }),
 

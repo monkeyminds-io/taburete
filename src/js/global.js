@@ -11,3 +11,11 @@ window.onscroll = () => {
     ? navbar.classList.add("white")
     : navbar.classList.remove("white");
 };
+
+// CATEGORY CARDS - HOVER EVENT ////////////////
+import { initCategoryCards } from "./components/category-card.js";
+initCategoryCards();
+
+// SLIDERS FUNCTIONALITY ////////////////
+import { initSliders } from "./components/slider.js";
+initSliders();
