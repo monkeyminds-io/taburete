@@ -1,9 +1,8 @@
 // NAVBAR FUNCTIONALITY
 // Imports
 import { openMenu, setCurrent } from "./components/navbar.js";
-// DOM elements
+// TODO abstract to navbar.js and create initNavbar()
 const navbar = document.querySelector('[data-component="navbar"]');
-// Logic
 openMenu(navbar);
 setCurrent(navbar);
 window.onscroll = () => {
@@ -18,4 +17,7 @@ initCategoryCards();
 
 // SLIDERS FUNCTIONALITY ////////////////
 import { initSliders } from "./components/slider.js";
-initSliders();
+const sliders = document.querySelectorAll('[data-component="slider"]');
+sliders.forEach((slider) => {
+  initSliders(slider);
+});

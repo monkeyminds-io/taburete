@@ -1,0 +1,8 @@
+/* UTILES - PADDINGS */
+.padding {
+  &--top {
+    &--2xs {
+      padding-top: map-get($spacers, "2xs");
+    }
+  }
+}

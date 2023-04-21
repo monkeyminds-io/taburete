@@ -194,8 +194,16 @@ img {
   opacity: 0;
 }
 
+.margin--bottom--xs {
+  margin-bottom: 24px;
+}
 .margin--bottom--md {
   margin-bottom: 40px;
+}
+
+/* UTILES - PADDINGS */
+.padding--top--2xs {
+  padding-top: 16px;
 }
 
 /* UTILES - WITHS */
@@ -203,9 +211,23 @@ img {
   /* RESPONSIVENESS */
 }
 @media only screen and (min-width: 768px) {
-  .width--tb--md-md {
-    width: 480px;
+  .width--tb--md-sm {
+    flex: none;
+    width: 320px;
   }
+  .width--tb--md-md {
+    flex: none;
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .width--dk--md-md {
+    flex: none;
+    width: 400px;
+  }
+}
+.width--full {
+  width: 100%;
 }
 .width--max--md-4xl {
   max-width: 800px;
@@ -234,11 +256,23 @@ h2 {
 }
 
 /* Text */
+.text--small {
+  font-size: 12px;
+}
+.text--bold {
+  font-weight: 600;
+}
+.text--neutral--light {
+  color: #adbfc6;
+}
 .text--neutral--dark {
   color: #596c73;
 }
 .text--center {
   text-align: center;
+}
+.text--uppercase {
+  text-transform: uppercase;
 }
 
 .section {
@@ -255,9 +289,10 @@ h2 {
 }
 .section--nav {
   padding: 24px 0;
-  transition: background-color 0.32s ease-in-out, box-shadow 0.32s ease-in-out;
+  transition: padding 0.32s ease-in-out, background-color 0.32s ease-in-out, box-shadow 0.32s ease-in-out;
 }
 .section--nav.white {
+  padding: 8px 0;
   background-color: #f5fcff;
   box-shadow: 0px 4px 24px rgba(40, 54, 58, 0.24);
 }
@@ -296,16 +331,17 @@ h2 {
 }
 .container--flex {
   display: flex;
+  flex-direction: column;
+  gap: 16px;
   /* RESPONSIVENESS */
 }
-@media only screen and (min-width: 320px) {
-  .container--flex.portrait--vertical {
-    flex-direction: column;
-  }
+.container--flex.gap--sm--sm {
+  gap: 32px;
 }
 @media only screen and (min-width: 768px) {
   .container--flex.tablet--horizontal {
     flex-direction: row;
+    gap: 32px;
   }
 }
 .container--center {
@@ -325,6 +361,15 @@ h2 {
 }
 .flex--horizontal {
   flex-direction: row;
+}
+.flex--horizontal.align-items--baseline {
+  align-items: baseline;
+}
+.flex--horizontal.justify-content--start {
+  justify-content: flex-start;
+}
+.flex.gap--sm--3xs {
+  gap: 8px;
 }
 
 /* LAYOUTS - GRIDS */
@@ -390,6 +435,17 @@ h2 {
   color: #f5fcff;
   background-color: #d25324;
 }
+.button--primary:hover {
+  color: #d25324;
+  background-color: #f9d5c9;
+}
+.button--secondary {
+  padding: 0;
+  width: fit-content;
+}
+.button--secondary:hover {
+  color: #d25324;
+}
 .button--slider-nav {
   padding: 0;
   width: 48px;
@@ -397,7 +453,7 @@ h2 {
   background-color: #d25324;
   border-radius: 24px;
 }
-.button:hover {
+.button--slider-nav:hover {
   color: #d25324;
   background-color: #f9d5c9;
 }
@@ -667,13 +723,77 @@ h2 {
 .card--testimonial__review {
   width: 100%;
 }
+.card--featured-item {
+  width: 288px;
+  box-shadow: none;
+  border: solid 1px #ccd8dd;
+  /* RESPONSIVENESS */
+}
+@media only screen and (min-width: 1024px) {
+  .card--featured-item {
+    width: max-content;
+  }
+}
+.card--featured-item__image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  overflow: hidden;
+  /* RESPONSIVENESS */
+}
+@media only screen and (min-width: 768px) {
+  .card--featured-item__image {
+    height: 240px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .card--featured-item__image {
+    height: 320px;
+  }
+}
+.card--featured-item__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 8px 16px;
+  /* RESPONSIVENESS */
+}
+@media only screen and (min-width: 768px) {
+  .card--featured-item__info {
+    padding: 16px 32px;
+  }
+}
 
 /* COMPONENTS - SLIDERS */
 .slider {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 100%;
+}
+.slider__wrapper {
+  position: relative;
+  /* RESPONSIVENESS */
+}
+.slider__wrapper .overlay {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .slider__wrapper {
+    padding: 16px 32px 0px;
+    overflow: hidden;
+  }
+  .slider__wrapper .overlay {
+    display: block;
+    position: absolute;
+    left: 90%;
+    top: 0;
+    right: 0;
+    bottom: 88px;
+    z-index: 99;
+    background: linear-gradient(270deg, #f5fcff 0%, rgba(245, 252, 255, 0) 100%);
+  }
 }
 .slider__mask {
   display: flex;
@@ -702,4 +822,7 @@ h2 {
   flex-direction: row;
   justify-content: flex-end;
   gap: 16px;
+}
+.slider--testimonials {
+  width: 100%;
 }

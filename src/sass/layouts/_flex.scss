@@ -13,5 +13,25 @@
 
   &--horizontal {
     flex-direction: row;
+
+    &.align-items {
+      &--baseline {
+        align-items: baseline;
+      }
+    }
+
+    &.justify-content {
+      &--start {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &.gap {
+    &--sm {
+      &--3xs {
+        gap: 8px;
+      }
+    }
   }
 }

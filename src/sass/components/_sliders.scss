@@ -3,7 +3,36 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 100%;
+
+  &__wrapper {
+    position: relative;
+
+    .overlay {
+      display: none;
+    }
+
+    /* RESPONSIVENESS */
+    // Tablet
+    @include responsive(sm) {
+      padding: 16px 32px 0px;
+      overflow: hidden;
+
+      .overlay {
+        display: block;
+        position: absolute;
+        left: 90%;
+        top: 0;
+        right: 0;
+        bottom: 88px;
+        z-index: 99;
+        background: linear-gradient(
+          270deg,
+          #f5fcff 0%,
+          rgba(245, 252, 255, 0) 100%
+        );
+      }
+    }
+  }
 
   &__mask {
     display: flex;
@@ -36,5 +65,12 @@
     flex-direction: row;
     justify-content: flex-end;
     gap: 16px;
+  }
+
+  &--testimonials {
+    width: 100%;
+  }
+
+  &--featired-items {
   }
 }
