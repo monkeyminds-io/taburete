@@ -66,10 +66,18 @@
   &--testimonial {
     flex: none;
     display: flex;
-    flex-direction: row;
-    padding: 32px;
+    flex-direction: column;
+    padding: 16px;
     gap: 16px;
-    width: 480px;
+    width: 240px;
+
+    /* RESPONSIVENESS */
+    // Landscape
+    @include responsive(xs) {
+      flex-direction: row;
+      padding: 32px;
+      width: 480px;
+    }
 
     &__client {
       display: flex;

@@ -38,10 +38,11 @@ const setCurrentDot = (dots) => {
   });
 };
 
-const setPreviousClickEvent = (mask, previous, dots) => {
+const setPreviousClickEvent = (mask, slides, previous, dots) => {
   const clickables = [previous, ...previous.children];
   previous.onclick = (e) => {
     e.preventDefault();
+    increment = slides[0].offsetWidth + 32;
     currentIncrement = currentIncrement + increment;
     clickables.forEach((clickable) => {
       if (e.target === clickable) {
@@ -55,10 +56,11 @@ const setPreviousClickEvent = (mask, previous, dots) => {
   };
 };
 
-const setNextClickEvent = (mask, next, dots) => {
+const setNextClickEvent = (mask, slides, next, dots) => {
   const clickables = [next, ...next.children];
   next.onclick = (e) => {
     e.preventDefault();
+    increment = slides[0].offsetWidth + 32;
     currentIncrement = currentIncrement - increment;
     clickables.forEach((clickable) => {
       if (e.target === clickable) {
@@ -82,8 +84,15 @@ export const initSliders = () => {
     const previous = slider.querySelector('[data-element="button-previous"]');
     const next = slider.querySelector('[data-element="button-next"]');
     lastSlide = slides.length - 1;
-    increment = slides[0].offsetWidth + 32;
-    setPreviousClickEvent(mask, previous, dots);
-    setNextClickEvent(mask, next, dots);
+    setPreviousClickEvent(mask, slides, previous, dots);
+    setNextClickEvent(mask, slides, next, dots);
+    window.onresize = (e) => {
+      currentSlide = 0;
+      currentIncrement = 0;
+      slideMask(mask);
+      setCurrentDot(dots);
+      disableButton(previous);
+      enableButton(next);
+    };
   });
 };
