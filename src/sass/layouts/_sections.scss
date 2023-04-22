@@ -1,3 +1,4 @@
+/* LAYOUTS - SECTIONS */
 .section {
   display: flex;
   flex-direction: column;
@@ -16,10 +17,14 @@
       box-shadow 0.32s ease-in-out;
 
     &.white {
-      padding: 8px 0;
       background-color: neutral("white");
       box-shadow: 0px 4px 24px rgba(40, 54, 58, 0.24);
     }
+  }
+
+  &--footer {
+    padding: 16px 0px;
+    background-color: neutral("even-lighter");
   }
 
   &--hero {
@@ -54,5 +59,10 @@
     @include responsive(md) {
       margin: 0;
     }
+  }
+
+  &--cta {
+    padding: 40px 0;
+    background-color: neutral("even-lighter");
   }
 }

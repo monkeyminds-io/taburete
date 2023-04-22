@@ -1,0 +1,17 @@
+/* ELEMENTS - INPUTS */
+.input {
+  padding: 16px;
+  width: 100%;
+  background-color: neutral("white");
+  border: 1px solid neutral("light");
+  cursor: auto;
+
+  &::placeholder {
+    font-family: $font-copy;
+    font-style: normal;
+    font-weight: font-weight("regular");
+    font-size: font-size("md");
+    line-height: 1;
+    color: neutral("light");
+  }
+}

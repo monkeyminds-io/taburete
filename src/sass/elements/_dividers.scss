@@ -1,0 +1,9 @@
+/* ELEMENTS - DIVIDERS */
+.divider {
+  background-color: neutral("lighter");
+
+  &--horizontal {
+    width: 100%;
+    height: 1px;
+  }
+}

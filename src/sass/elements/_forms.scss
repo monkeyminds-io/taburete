@@ -1,0 +1,24 @@
+/* EMELENTS - FORMS */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+
+  &--horizontal {
+    /* RESPONSIVENESS */
+    // Tablet
+    @include responsive(sm) {
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+
+  &--newsletter {
+    /* RESPONSIVENESS */
+    // Tablet
+    @include responsive(sm) {
+      width: 560px;
+    }
+  }
+}
