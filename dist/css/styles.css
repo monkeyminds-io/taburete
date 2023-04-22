@@ -313,6 +313,9 @@ h2 {
 .text--small {
   font-size: 12px;
 }
+.text--large {
+  font-size: 24px;
+}
 .text--bold {
   font-weight: 600;
 }
@@ -884,6 +887,32 @@ h2 {
 }
 @media only screen and (min-width: 768px) {
   .card--featured-item__info {
+    padding: 16px 32px;
+  }
+}
+.card--post__image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 160px;
+  /* RESPONSIVENESS */
+}
+@media only screen and (min-width: 768px) {
+  .card--post__image {
+    height: 240px;
+  }
+}
+.card--post__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 8px 16px;
+  /* RESPONSIVENESS */
+}
+@media only screen and (min-width: 768px) {
+  .card--post__body {
     padding: 16px 32px;
   }
 }
