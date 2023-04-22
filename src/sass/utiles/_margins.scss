@@ -1,5 +1,8 @@
 .margin {
   &--bottom {
+    &--2xs {
+      margin-bottom: map-get($spacers, "2xs");
+    }
     &--xs {
       margin-bottom: map-get($spacers, "xs");
     }

@@ -18,23 +18,58 @@ html(lang="en")
         main
             // Hero section
             section.section.section--hero
-                .container.container--flex.portrait--vertical.tablet--horizontal
+                .container.container--flex.container--flex--tb-horizontal
                     .flex.flex--vertical.align-items--start.width--tb--md-md
                         h1 Minimal furniture for everyday
                         p.text--neutral--dark.margin--bottom--md.
                             Your home is your sanctuary, your peaceful oasis, where you go to rest your mind and body. Our furniture will give you peace, serenity and comfort.
                         a.button.button--primary(href="./shop.html") Shop online now
-                    .image__wrapper.hero
+                    .image__wrapper.image__wrapper--hero
                         // Image from Unsplash License Free image by Inside Weather
-                        img.image.hero(src="./img/hero-image.png", alt="Photo by Inside Weather on Unsplash")
+                        img.image.image--hero(src="./img/hero-image.png", alt="Photo by Inside Weather on Unsplash")
             // Categories section
             section.section
                 .container.container--center
                     h2.text--center Categories
-                    include includes/category-grid.pug
+                    .grid.grid--2-columns
+                        a.card.card--category(href='./shop.html?bedroom', data-component="category-card")
+                            .card--category__overlay(data-element="ovelay")
+                                span Bedrooom
+                            .card--category__background(data-element="background")
+                                img(src='./img/bedroom-image.webp', alt='Bedroom main image')
+                        a.card.card--category(href='./shop.html?living-room', data-component="category-card")
+                            .card--category__overlay(data-element="ovelay")
+                                span Living room
+                            .card--category__background(data-element="background")
+                                img.card--category__image(src='./img/living_room-image.webp', alt='Living room main image')
+                        a.card.card--category(href='./shop.html?garden', data-component="category-card")
+                            .card--category__overlay(data-element="ovelay")
+                                span Garden
+                            .card--category__background(data-element="background")
+                                img.card--category__image(src='./img/garden-image.webp', alt='Garden main image')
+                        a.card.card--category(href='./shop.html?dining', data-component="category-card")
+                            .card--category__overlay(data-element="ovelay")
+                                span Dining
+                            .card--category__background(data-element="background")
+                                img.card--category__image(src='./img/dining-image.webp', alt='Dining main image')
             // Testimonials section
             include includes/testimonials-section.pug
             // Featured section
             include includes/featured-section.pug
+            // About section
+            section.section.section--about
+                .container.container--flex.container--flex--dk-horizontal.padding--left--none
+                    .image__wrapper.image__wrapper--about
+                        // Image from Unsplash License Free image by Christelle BOURGEOIS
+                        img.image.image--about(src="./img/about-image.png", alt="Photo by Christelle BOURGEOIS on Unsplash")
+                    .flex.flex--vertical.align-items--start.padding--top--md.padding--tb--top-none.padding--dk--top-4xl.padding--bottom--md.padding--tb--bottom-4xl.padding--left--2xs.padding--ml--left-xs.padding--tb--left-md.padding--dk--left-none.padding--right--2xs.padding--ml--right-xs.padding--tb--right-md.padding--dk--right-none
+                        h2.margin--bottom--xs About us
+                        p.margin--bottom--2xs.
+                            In Taburete we think of you all the time. We want to design your home’s furniture. We live to help create your peaceful retreat. That one you call home.
+                        p.margin--bottom--2xs.
+                            Our main goal is to inspire you, to motivate you, to make your home a better place to life and relax. We want you to make great memories. Memories that will live for ever. that will go from generation to generation to generation.
+                        p.margin--bottom--md.
+                            Thanks to our amazing team of designers (and all the people in the office 😅) we can say that you will always get the latest trends in furniture design. But always with our minimalistic spirit.
+                        a.button.button--primary(href="./shop.html") Shop online now
 
             

@@ -27,8 +27,12 @@
       background: brand("overlay");
       transition: opacity 0.32s ease-in-out;
 
-      &.hovering {
-        opacity: 0;
+      /* RESPONSIVENESS */
+      // Desktop
+      @include responsive(md) {
+        &.hovering {
+          opacity: 0;
+        }
       }
     }
 
@@ -53,11 +57,11 @@
       // Tablet
       @include responsive(sm) {
         height: auto;
-      }
 
-      &.hovering {
-        img {
-          transform: scale(128%);
+        &.hovering {
+          img {
+            transform: scale(128%);
+          }
         }
       }
     }
