@@ -9,6 +9,10 @@
  * LAST UPDATE: 20/04/2023
  */
 // FUNCTIONS ////////////////
+/**
+ * Used to set the mouse over event in the category card
+ * @param {HTMLElement} card
+ */
 const setMouseOverEvent = (card) => {
   const overlay = card.querySelector('[data-element="ovelay"]');
   const background = card.querySelector('[data-element="background"]');
@@ -18,6 +22,10 @@ const setMouseOverEvent = (card) => {
   };
 };
 
+/**
+ * Used to set the mouse out event in the category card
+ * @param {HTMLElement} card
+ */
 const setMouseOutEvent = (card) => {
   const overlay = card.querySelector('[data-element="ovelay"]');
   const background = card.querySelector('[data-element="background"]');
@@ -28,14 +36,8 @@ const setMouseOutEvent = (card) => {
 };
 
 // EXPORTS ////////////////
-export const initCategoryCards = () => {
-  // DOM Elements
-  const categoryCards = document.querySelectorAll(
-    '[data-component="category-card"]'
-  );
-
-  // Logic
-  categoryCards.forEach((card) => {
+export const initCategoryCards = (cards) => {
+  cards.forEach((card) => {
     setMouseOverEvent(card);
     setMouseOutEvent(card);
   });

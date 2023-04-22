@@ -26,9 +26,16 @@
 
 // Elements
 @import "./elements/buttons";
+@import "./elements/links";
 @import "./elements/images";
+@import "./elements/forms";
+@import "./elements/inputs";
+@import "./elements/dividers";
+@import "./elements/social-media";
 
 // Components
 @import "./components/navbar";
+@import "./components/footer";
 @import "./components/cards";
 @import "./components/sliders";
+@import "./components/modals";

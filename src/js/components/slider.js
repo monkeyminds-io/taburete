@@ -8,6 +8,7 @@
  * CREATED AT: 20/04/2023
  * LAST UPDATE: 20/04/2023
  */
+// EXPORTS ////////////////
 export const initSliders = (slider) => {
   // VARIABLES ////////////////
   let currentSlide = 0;
@@ -16,18 +17,34 @@ export const initSliders = (slider) => {
   let increment;
 
   // FUNCTIONS ////////////////
+  /**
+   * Used to move the slider mask in the X axis
+   * @param {HTMLElement} mask
+   */
   const slideMask = (mask) => {
     mask.style.transform = `translateX(${currentIncrement}px)`;
   };
 
+  /**
+   * Used to enable the slider button
+   * @param {HTMLElement} button
+   */
   const enableButton = (button) => {
     button.classList.remove("disabled");
   };
 
+  /**
+   * Used to disable the slider button
+   * @param {HTMLElement} button
+   */
   const disableButton = (button) => {
     button.classList.add("disabled");
   };
 
+  /**
+   * Used to set the active dot
+   * @param {NodeList} dots
+   */
   const setCurrentDot = (dots) => {
     dots.forEach((dot, index) => {
       dot.classList.remove("active");
@@ -39,6 +56,13 @@ export const initSliders = (slider) => {
     });
   };
 
+  /**
+   * Used to set the event in the previous button
+   * @param {HTMLElement} mask
+   * @param {HTMLElement} slides
+   * @param {HTMLElement} previous
+   * @param {NodeList} dots
+   */
   const setPreviousClickEvent = (mask, slides, previous, dots) => {
     const clickables = [previous, ...previous.children];
     previous.onclick = (e) => {
@@ -57,6 +81,13 @@ export const initSliders = (slider) => {
     };
   };
 
+  /**
+   * Used to set the event in the next button
+   * @param {HTMLElement} mask
+   * @param {HTMLElement} slides
+   * @param {HTMLElement} previous
+   * @param {NodeList} dots
+   */
   const setNextClickEvent = (mask, slides, next, dots) => {
     const clickables = [next, ...next.children];
     next.onclick = (e) => {
@@ -84,6 +115,8 @@ export const initSliders = (slider) => {
   lastSlide = slides.length - 1;
   setPreviousClickEvent(mask, slides, previous, dots);
   setNextClickEvent(mask, slides, next, dots);
+
+  // This resets the slider on screen resice event
   window.onresize = (e) => {
     currentSlide = 0;
     currentIncrement = 0;

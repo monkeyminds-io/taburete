@@ -1,0 +1,17 @@
+//- Section CTA
+section.section.section--cta
+    .container.container--center
+        h2.text--center.margin--bottom--xs Subscribe to our newsletter
+        p.text--neutral--dark.text--center.width--dk--md-2xl.margin--bottom--md.
+            Subscribe to our newsletter and get 20% off your next purchase. Plus you’ll get in your inbox some interesting articles on interior design, trends and lots of discounts!!
+        form.form.form--horizontal.form--newsletter(method="POST", action="", data-component="newsletter-form")
+            input.input(type="text", name="email", id="email", placeholder="joedoe@gmail.com")
+            input.button.button--primary(type="submit", value="Subscribe now!", name="submit", id="submit")
+// Modal subscription successful
+.modal.hidden(data-component="modal")
+    h3 Success!!
+    p.
+        Your order is with us now!! PRepare for your WOWBurger experience... 😋
+    a.button.button--primary(href="./index.html") Back to home
+// Modal overlay
+.overlay.hidden(data-component="overlay")

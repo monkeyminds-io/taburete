@@ -1,0 +1,15 @@
+/* ELEMENTS - LINKS */
+.link {
+  color: brand("primary");
+  cursor: pointer;
+  transition: color 0.32s ease-in-out, text-decoration 0.32s ease-in-out;
+
+  /* RESPONSIVENESS */
+  // Desktop
+  @include responsive(md) {
+    &:hover {
+      text-decoration: underline;
+      color: brand("accent");
+    }
+  }
+}

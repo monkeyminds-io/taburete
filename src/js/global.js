@@ -1,23 +1,30 @@
+/**
+ * global.js
+ * ----------------
+ * DESCRIPTION:
+ * This file contains the functionality for the all components in the website to work.
+ *
+ * AUTHOR: Pau Ferrer @ Minimal Designs
+ * CREATED AT: 22/04/2023
+ * LAST UPDATE: 22/04/2023
+ */
 // NAVBAR FUNCTIONALITY
-// Imports
-import { openMenu, setCurrent } from "./components/navbar.js";
-// TODO abstract to navbar.js and create initNavbar()
+import { initNavbar } from "./components/navbar.js";
 const navbar = document.querySelector('[data-component="navbar"]');
-openMenu(navbar);
-setCurrent(navbar);
-window.onscroll = () => {
-  window.scrollY > 0
-    ? navbar.classList.add("white")
-    : navbar.classList.remove("white");
-};
+initNavbar(navbar);
 
 // CATEGORY CARDS - HOVER EVENT ////////////////
 import { initCategoryCards } from "./components/category-card.js";
-initCategoryCards();
+const categoryCards = document.querySelectorAll(
+  '[data-component="category-card"]'
+);
+categoryCards != null ? initCategoryCards(categoryCards) : null;
 
 // SLIDERS FUNCTIONALITY ////////////////
 import { initSliders } from "./components/slider.js";
 const sliders = document.querySelectorAll('[data-component="slider"]');
-sliders.forEach((slider) => {
-  initSliders(slider);
-});
+sliders != null
+  ? sliders.forEach((slider) => {
+      initSliders(slider);
+    })
+  : null;

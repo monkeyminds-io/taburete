@@ -22,6 +22,7 @@ const paths = {
   },
 };
 
+// TODO Add pug loader
 module.exports = {
   mode: "development", // TODO set to production when publishing
   entry: {
