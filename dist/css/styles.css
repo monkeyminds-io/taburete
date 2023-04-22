@@ -632,9 +632,12 @@ h2 {
   color: #f5fcff;
   background: rgba(88, 175, 206, 0.24);
   transition: opacity 0.32s ease-in-out;
+  /* RESPONSIVENESS */
 }
-.card--category__overlay.hovering {
-  opacity: 0;
+@media only screen and (min-width: 1024px) {
+  .card--category__overlay.hovering {
+    opacity: 0;
+  }
 }
 .card--category__background {
   display: flex;
@@ -657,9 +660,9 @@ h2 {
   .card--category__background {
     height: auto;
   }
-}
-.card--category__background.hovering img {
-  transform: scale(128%);
+  .card--category__background.hovering img {
+    transform: scale(128%);
+  }
 }
 .card--testimonial {
   flex: none;
