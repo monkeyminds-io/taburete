@@ -25,12 +25,28 @@ h2 {
 
 /* Text */
 .text {
+  &--small {
+    font-size: font-size("sm");
+  }
+
+  &--bold {
+    font-weight: font-weight("bold");
+  }
+
   &--neutral {
+    &--light {
+      color: neutral("light");
+    }
     &--dark {
       color: neutral("dark");
     }
   }
+
   &--center {
     text-align: center;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
   }
 }

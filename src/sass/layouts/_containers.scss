@@ -28,26 +28,24 @@
 
   &--flex {
     display: flex;
-    /* RESPONSIVENESS */
-    // Portrait
-    @include responsive(2xs) {
-      &.portrait--vertical {
-        flex-direction: column;
+    flex-direction: column;
+    gap: 16px;
+
+    &.gap {
+      &--sm {
+        &--sm {
+          gap: 32px;
+        }
       }
     }
-    // Landscape
-    @include responsive(xs) {
-    }
 
+    /* RESPONSIVENESS */
     // Tablet
     @include responsive(sm) {
       &.tablet--horizontal {
         flex-direction: row;
+        gap: 32px;
       }
-    }
-
-    // Desktop
-    @include responsive(md) {
     }
   }
 

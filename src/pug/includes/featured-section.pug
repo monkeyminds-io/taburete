@@ -1,0 +1,60 @@
+section.section
+    .container.container--flex.portrait--vertical.tablet--horizontal.gap--sm--sm
+        .flex.flex--vertical.align-items--start.width--tb--md-sm.width--dk--md-md.padding--top--2xs
+            h2.margin--bottom--xs Trendy furniture
+            p.margin--bottom--md.
+                These are the top 3 sales that our clients are buying. We have more furniture, but these are hot and making people happy. You can have a look at their descriptions and decide... or you can add them to your cart straight away!!
+            a.button.button--primary(href="./shop.html") Shop online now
+        .slider__wrapper
+            .overlay.right
+            .overlay.left
+            .slider.slider--featured-items(data-component="slider")
+                .slider__mask(data-element="slider-mask")
+                    .card.card--featured-item
+                        .card--featured-item__image
+                            img(src="./img/products/bedroom/tufjord/image-3.webp", alt="Side image if Tufjord bed.")
+                        .card--featured-item__info
+                            .width--full
+                                .flex.flex--horizontal.align-items--baseline.justify-content--start.gap--sm--3xs
+                                    span.text--uppercase Tufjord
+                                    span.text--small.text--bold € 750.00
+                                .text--neutral--light.text--uppercase Bedroom
+                            a.button.button--secondary(href="#") Add to cart 
+                                svg(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M23.219 14.1146L17.495 8.39059L15.6097 10.2759L20.0003 14.6666H6.66699V17.3333H20.0003L15.6097 21.7239L17.495 23.6093L23.219 17.8853C23.7189 17.3852 23.9998 16.707 23.9998 15.9999C23.9998 15.2928 23.7189 14.6147 23.219 14.1146V14.1146Z" fill="currentColor")
+                    .card.card--featured-item
+                        .card--featured-item__image
+                            img(src="./img/products/garden/kolbjorn/image-2.webp", alt="Image of opened garden storage Kolbjorn.")
+                        .card--featured-item__info
+                            .width--full
+                                .flex.flex--horizontal.align-items--baseline.justify-content--start.gap--sm--3xs
+                                    span.text--uppercase KOLBJÖRN
+                                    span.text--small.text--bold € 179.00
+                                .text--neutral--light.text--uppercase Garden
+                            a.button.button--secondary(href="#") Add to cart 
+                                svg(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M23.219 14.1146L17.495 8.39059L15.6097 10.2759L20.0003 14.6666H6.66699V17.3333H20.0003L15.6097 21.7239L17.495 23.6093L23.219 17.8853C23.7189 17.3852 23.9998 16.707 23.9998 15.9999C23.9998 15.2928 23.7189 14.6147 23.219 14.1146V14.1146Z" fill="currentColor")
+                    .card.card--featured-item
+                        .card--featured-item__image
+                            img(src="./img/products/living-room/gurli/image-3.webp", alt="Image of the blanquet Gurli on the sofa.")
+                        .card--featured-item__info
+                            .width--full
+                                .flex.flex--horizontal.align-items--baseline.justify-content--start.gap--sm--3xs
+                                    span.text--uppercase Gurli
+                                    span.text--small.text--bold € 12.00
+                                .text--neutral--light.text--uppercase Living room
+                            a.button.button--secondary(href="#") Add to cart 
+                                svg(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M23.219 14.1146L17.495 8.39059L15.6097 10.2759L20.0003 14.6666H6.66699V17.3333H20.0003L15.6097 21.7239L17.495 23.6093L23.219 17.8853C23.7189 17.3852 23.9998 16.707 23.9998 15.9999C23.9998 15.2928 23.7189 14.6147 23.219 14.1146V14.1146Z" fill="currentColor")
+                .slider__dots
+                    .dot.active(data-element="dot", data-is-active="true")
+                    .dot(data-element="dot", data-is-active="false")
+                    .dot(data-element="dot", data-is-active="false")
+                .slider__nav
+                    a.button.button--slider-nav.disabled(href="#", data-element="button-previous", disabled)
+                        img(src="./img/icons/arrow-left-icon.svg")
+                    a.button.button--slider-nav(href="#", data-element="button-next")
+                        img(src="./img/icons/arrow-right-icon.svg")
+
+
+            

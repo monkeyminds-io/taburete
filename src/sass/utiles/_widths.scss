@@ -9,8 +9,13 @@
   @include responsive(sm) {
     &--tb {
       &--md {
+        &-sm {
+          flex: none;
+          width: 320px;
+        }
         &-md {
-          width: 480px;
+          flex: none;
+          width: 400px;
         }
       }
     }
@@ -18,6 +23,18 @@
 
   // Desktop
   @include responsive(md) {
+    &--dk {
+      &--md {
+        &-md {
+          flex: none;
+          width: 400px;
+        }
+      }
+    }
+  }
+
+  &--full {
+    width: 100%;
   }
 
   &--max--md-4xl {
