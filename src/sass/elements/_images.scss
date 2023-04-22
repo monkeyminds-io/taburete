@@ -1,7 +1,8 @@
+/* ELEMENTS - IMAGES */
 .image__wrapper {
   overflow: hidden;
 
-  &.hero {
+  &--hero {
     display: block;
     flex: none;
     position: relative;
@@ -10,10 +11,6 @@
     width: 100%;
     height: 320px;
     /* RESPONSIVENESS */
-    // Landscape
-    @include responsive(xs) {
-    }
-
     // Tablet
     @include responsive(sm) {
       margin: 0;
@@ -27,19 +24,70 @@
       height: 480px;
     }
   }
+
+  &--about {
+    display: block;
+    flex: none;
+    width: 100%;
+    height: 240px;
+    position: relative;
+    overflow: visible;
+
+    /* RESPONSIVENESS */
+    // Landscape
+    @include responsive(xs) {
+      height: 480px;
+    }
+
+    // Desktop
+    @include responsive(md) {
+      width: 400px;
+    }
+
+    // Large screens
+    @include responsive(lg) {
+      width: 480px;
+    }
+  }
 }
 
 .image {
   width: 120%;
 
-  &.hero {
+  &--hero {
     position: absolute;
     left: 0;
     top: 0;
 
+    /* RESPONSIVENESS */
     // Desktop
     @include responsive(md) {
       width: 160%;
+    }
+  }
+
+  &--about {
+    position: absolute;
+    left: -32px;
+    bottom: -48px;
+
+    /* RESPONSIVENESS */
+    // Tablet
+    @include responsive(sm) {
+      width: 640px;
+      left: -40px;
+    }
+
+    // Desktop
+    @include responsive(md) {
+      left: -20%;
+    }
+
+    // Large screens
+    @include responsive(lg) {
+      width: 800px;
+      left: -30%;
+      bottom: -40%;
     }
   }
 }

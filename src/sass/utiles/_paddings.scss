@@ -4,5 +4,93 @@
     &--2xs {
       padding-top: map-get($spacers, "2xs");
     }
+    &--md {
+      padding-top: map-get($spacers, "md");
+    }
+  }
+
+  &--bottom {
+    &--md {
+      padding-bottom: map-get($spacers, "md");
+    }
+  }
+
+  &--left {
+    &--none {
+      padding-left: 0;
+    }
+    &--2xs {
+      padding-left: map-get($spacers, "2xs");
+    }
+  }
+
+  &--right {
+    &--2xs {
+      padding-right: map-get($spacers, "2xs");
+    }
+  }
+
+  /* RESPONSIVENESS */
+  // Landscape
+  @include responsive(xs) {
+    &--ml {
+      &--left {
+        &-xs {
+          padding-left: map-get($spacers, "xs");
+        }
+      }
+      &--right {
+        &-xs {
+          padding-right: map-get($spacers, "xs");
+        }
+      }
+    }
+  }
+
+  // Tablet
+  @include responsive(sm) {
+    &--tb {
+      &--top {
+        &-none {
+          padding-top: 0;
+        }
+      }
+      &--bottom {
+        &-4xl {
+          padding-bottom: 80px;
+        }
+      }
+      &--left {
+        &-md {
+          padding-left: map-get($spacers, "md");
+        }
+      }
+      &--right {
+        &-md {
+          padding-right: map-get($spacers, "md");
+        }
+      }
+    }
+  }
+
+  // Desktop
+  @include responsive(md) {
+    &--dk {
+      &--top {
+        &-4xl {
+          padding-top: 80px;
+        }
+      }
+      &--left {
+        &-none {
+          padding-left: 0;
+        }
+      }
+      &--right {
+        &-none {
+          padding-right: 0;
+        }
+      }
+    }
   }
 }

@@ -31,4 +31,28 @@
       #8fdcf9 100%
     );
   }
+
+  &--about {
+    padding: 0;
+    margin-top: map-get($spacers, "md");
+    background: radial-gradient(
+      100% 349.63% at 100% 0%,
+      #adbfc6 0%,
+      #eef5f8 100%
+    );
+
+    /* RESPONSIVENESS */
+    // Landscape
+    @include responsive(xs) {
+    }
+
+    // Tablet
+    @include responsive(sm) {
+    }
+
+    // Desktop
+    @include responsive(md) {
+      margin: 0;
+    }
+  }
 }

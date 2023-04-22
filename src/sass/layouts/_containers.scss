@@ -42,7 +42,15 @@
     /* RESPONSIVENESS */
     // Tablet
     @include responsive(sm) {
-      &.tablet--horizontal {
+      &--tb-horizontal {
+        flex-direction: row;
+        gap: 32px;
+      }
+    }
+
+    // Desktop
+    @include responsive(md) {
+      &--dk-horizontal {
         flex-direction: row;
         gap: 32px;
       }
