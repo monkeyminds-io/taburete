@@ -725,8 +725,6 @@ h2 {
 }
 .card--featured-item {
   width: 288px;
-  box-shadow: none;
-  border: solid 1px #ccd8dd;
   /* RESPONSIVENESS */
 }
 @media only screen and (min-width: 1024px) {
@@ -787,12 +785,21 @@ h2 {
   .slider__wrapper .overlay {
     display: block;
     position: absolute;
+    z-index: 99;
+  }
+  .slider__wrapper .overlay.right {
     left: 90%;
     top: 0;
     right: 0;
-    bottom: 88px;
-    z-index: 99;
+    bottom: 72px;
     background: linear-gradient(270deg, #f5fcff 0%, rgba(245, 252, 255, 0) 100%);
+  }
+  .slider__wrapper .overlay.left {
+    left: 0;
+    top: 0;
+    right: 96%;
+    bottom: 72px;
+    background: linear-gradient(90deg, #f5fcff 0%, rgba(245, 252, 255, 0) 100%);
   }
 }
 .slider__mask {
