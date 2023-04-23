@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack-w": "webpack --watch",
     "webpack-b": "webpack",
-    "pug-w": "pug -w ./src/pug/* -o ./src/html -P"
+    "pug-w": "pug -w ./src/views/* -o ./src/html -P"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "mini-css-extract-plugin": "^2.7.5",
+    "pug-plugin": "^4.9.7",
     "sass": "^1.62.0",
     "sass-loader": "^13.2.2",
     "webpack": "^5.79.0",

@@ -1,8 +1,8 @@
 // Requires
+const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const path = require("path");
 
 // System Variables
 const paths = {
@@ -31,8 +31,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "./dist"),
-    filename: paths.dist.js + "[name].js",
     publicPath: "/",
+    filename: paths.dist.js + "[name].js",
   },
   module: {
     rules: [
@@ -64,7 +64,7 @@ module.exports = {
       ],
     }),
     new MiniCssExtractPlugin({
-      filename: paths.dist.css + "/styles.css",
+      filename: paths.dist.css + "styles.css",
     }),
     new CleanWebpackPlugin(),
   ],

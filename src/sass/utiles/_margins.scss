@@ -1,5 +1,10 @@
 /* UTILES - MARGINS */
 .margin {
+  &--top {
+    &--xs {
+      margin-top: map-get($spacers, "xs");
+    }
+  }
   &--bottom {
     &--2xs {
       margin-bottom: map-get($spacers, "2xs");
@@ -10,5 +15,8 @@
     &--md {
       margin-bottom: map-get($spacers, "md");
     }
+  }
+  &--none {
+    margin: 0;
   }
 }

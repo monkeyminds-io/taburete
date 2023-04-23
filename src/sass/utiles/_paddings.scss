@@ -10,6 +10,9 @@
   }
 
   &--bottom {
+    &--3xs {
+      padding-bottom: map-get($spacers, "3xs");
+    }
     &--md {
       padding-bottom: map-get($spacers, "md");
     }

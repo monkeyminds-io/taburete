@@ -33,6 +33,39 @@
       &--3xs {
         gap: 8px;
       }
+      &--sm {
+        gap: 32px;
+      }
     }
+  }
+
+  /* RESPONSIVENESS */
+  // Landscape
+  @include responsive(xs) {
+  }
+
+  // Tablet
+  @include responsive(sm) {
+    &--tb {
+      &--horizontal {
+        flex-direction: row;
+
+        &.align-items {
+          &--center {
+            align-items: center;
+          }
+        }
+
+        &.justify-content {
+          &--center {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  // Desktop
+  @include responsive(md) {
   }
 }
