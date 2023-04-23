@@ -6,7 +6,7 @@
  *
  * AUTHOR: Pau Ferrer @ Minimal Designs
  * CREATED AT: 22/04/2023
- * LAST UPDATE: 22/04/2023
+ * LAST UPDATE: 23/04/2023
  */
 // NAVBAR FUNCTIONALITY
 import { initNavbar } from "./components/navbar.js";
@@ -27,4 +27,17 @@ sliders != null
   ? sliders.forEach((slider) => {
       initSliders(slider);
     })
+  : null;
+
+// NEWSLETTER FORM - SUBMIT EVENT ////////////////
+import { initNewsletterForm } from "./components/newsletter-form.js";
+const newsletterForm = document.querySelector(
+  '[data-component="newsletter-form"]'
+);
+const newsletterModal = document.querySelector(
+  '[data-component="newsletter-modal"]'
+);
+const overlay = document.querySelector('[data-component="overlay"]');
+newsletterForm != null
+  ? initNewsletterForm(newsletterForm, newsletterModal, overlay)
   : null;

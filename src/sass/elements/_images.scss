@@ -20,7 +20,7 @@
 
     // Desktop
     @include responsive(md) {
-      width: 60%;
+      width: 50%;
       height: 480px;
     }
   }
@@ -62,7 +62,7 @@
     /* RESPONSIVENESS */
     // Desktop
     @include responsive(md) {
-      width: 160%;
+      width: 140%;
     }
   }
 

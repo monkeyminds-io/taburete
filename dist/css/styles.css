@@ -280,6 +280,10 @@ img {
     flex: none;
     width: 400px;
   }
+  .width--dk--md-lg {
+    flex: none;
+    width: 480px;
+  }
   .width--dk--md-2xl {
     flex: none;
     width: 640px;
@@ -302,6 +306,11 @@ h3 {
   line-height: 1.2;
 }
 
+h2,
+h3 {
+  font-weight: 600;
+}
+
 h1 {
   margin-bottom: 32px;
   font-size: 48px;
@@ -311,7 +320,11 @@ h1 {
 h2 {
   margin-bottom: 48px;
   font-size: 32px;
-  font-weight: 600;
+}
+
+h3 {
+  margin-bottom: 24px;
+  font-size: 24px;
 }
 
 /* Text */
@@ -589,7 +602,7 @@ h2 {
 }
 @media only screen and (min-width: 1024px) {
   .image__wrapper--hero {
-    width: 60%;
+    width: 50%;
     height: 480px;
   }
 }
@@ -629,7 +642,7 @@ h2 {
 }
 @media only screen and (min-width: 1024px) {
   .image--hero {
-    width: 160%;
+    width: 140%;
   }
 }
 .image--about {
@@ -670,6 +683,7 @@ h2 {
 @media only screen and (min-width: 768px) {
   .form--horizontal {
     flex-direction: row;
+    align-items: flex-start;
     gap: 0;
   }
 }
@@ -681,11 +695,33 @@ h2 {
     width: 560px;
   }
 }
+.form__block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.form__feedback {
+  font-size: 12px;
+}
+.form__feedback.success {
+  color: #118d43;
+}
+.form__feedback.error {
+  color: #da4040;
+}
 
 /* ELEMENTS - INPUTS */
 .input {
   padding: 16px;
   width: 100%;
+  height: 48px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: #28363a;
   background-color: #f5fcff;
   border: 1px solid #adbfc6;
   cursor: auto;
@@ -1148,29 +1184,36 @@ h2 {
 .modal {
   display: flex;
   flex-direction: column;
-  padding: 48px;
-  width: 640px;
+  padding: 16px;
+  width: 80%;
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 101;
+  z-index: 10000;
+  text-align: center;
   background-color: #f5fcff;
-  border: 4px solid;
-  box-shadow: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+  box-shadow: 0px 4px 24px rgba(40, 54, 58, 0.24);
   transform: translate(-50%, -50%);
   transition: opacity 0.32s ease-in-out;
+  /* RESPONSIVENESS */
 }
 .modal a {
   width: 100% !important;
 }
+@media only screen and (min-width: 768px) {
+  .modal {
+    padding: 24px;
+    width: 320px;
+  }
+}
 
-.overlay {
+.background-overlay {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  background-color: rgba(88, 175, 206, 0.24);
   transition: opacity 0.32s ease-in-out;
 }

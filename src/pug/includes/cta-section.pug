@@ -5,13 +5,15 @@ section.section.section--cta
         p.text--neutral--dark.text--center.width--dk--md-2xl.margin--bottom--md.
             Subscribe to our newsletter and get 20% off your next purchase. Plus you’ll get in your inbox some interesting articles on interior design, trends and lots of discounts!!
         form.form.form--horizontal.form--newsletter(method="POST", action="", data-component="newsletter-form")
-            input.input(type="text", name="email", id="email", placeholder="joedoe@gmail.com")
+            .form__block
+                input.input(type="text", name="email", id="email", placeholder="joedoe@gmail.com")
+                span.form__feedback
             input.button.button--primary(type="submit", value="Subscribe now!", name="submit", id="submit")
 // Modal subscription successful
-.modal.hidden(data-component="modal")
-    h3 Success!!
-    p.
-        Your order is with us now!! PRepare for your WOWBurger experience... 😋
-    a.button.button--primary(href="./index.html") Back to home
+.modal.hidden(data-component="newsletter-modal")
+    h3 You are registered!!
+    p.margin--bottom--md.
+        Thanks for registering to our newsletter!!
+    a.button.button--primary(href="#") Close window
 // Modal overlay
-.overlay.hidden(data-component="overlay")
+.background-overlay.hidden(data-component="overlay")
