@@ -6,14 +6,20 @@
  *
  * AUTHOR: Pau Ferrer @ Minimal Designs
  * CREATED AT: 22/04/2023
- * LAST UPDATE: 22/04/2023
+ * LAST UPDATE: 23/04/2023
  */
+// CONSTANTS ////////////////
+const REGULAR_EXPRESIONS = {
+  email:
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
+};
+
 /**
  * Used to display a set modal and the overlay.
  * @param {HTMLElement} modal
  * @param {HTMLElement} overlay
  */
-const displayModal = function (modal, overlay) {
+const displayModal = (modal, overlay) => {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
@@ -23,77 +29,57 @@ const displayModal = function (modal, overlay) {
  * @param {HTMLElement} modal
  * @param {HTMLElement} overlay
  */
-const closeModal = function (modal, overlay) {
+const closeModal = (modal, overlay) => {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
 
 // TODO Validate data in form!!
 /**
- * Used to validate inputs based on the given rules
- * @param {Object} params The object that contains all the necessary data for validation of an input:
- *                              + isRequired (boolean)
- *                              + inputValue (any)
- *                              + validationRule (string)
- *                              + output (HTMLElement)
- * @returns {boolean} true if errors / false if not errors
+ * Used to check if an input is emapty
+ *  -> TRUE = NOT EMPTY
+ *  -> FALSE = EMPTY
+ * @param {HTMLElement} input
+ * @returns
  */
-const validateInput = function (params) {
-  let errorMessage;
-  params.output.innerHTML = "";
-  // Input required
-  if (params.isRequired) {
-    if (params.inputValue === "") {
-      errorMessage = "This field is required.";
-    } else {
-      // No spaces
-      if (params.validationRule === "no-spaces") {
-        errorMessage = !params.inputValue.includes(" ")
-          ? ""
-          : "Remove all white spaces.";
-      }
-      // Must be 9 character
-      else if (params.validationRule === "9-char") {
-        errorMessage =
-          params.inputValue.length === 9 ? "" : "Must be 9 charactes.";
-      }
-      // Burger size
-      else if (params.validationRule === "burger-size") {
-        errorMessage = PRICES.hasOwnProperty(params.inputValue)
-          ? ""
-          : "Must choose a size.";
-      }
-      // Max quantity 10
-      else if (params.validationRule === "min-max-quantity") {
-        errorMessage =
-          parseInt(params.inputValue) < 1
-            ? "Min quantity 1 burger."
-            : parseInt(params.inputValue) > 10
-            ? "Max quantity 10 burgers."
-            : "";
-      } else if (params.validationRule === "email") {
-        errorMessage = params.inputValue
-          .toLowerCase()
-          .match(REGULAR_EXPRESIONS.email)
-          ? ""
-          : "Not a correct email.";
-      }
-    }
-  }
-  // Incorrect discount code
-  else if (params.validationRule === "discount-code") {
-    errorMessage =
-      params.inputValue === ""
-        ? ""
-        : DISCOUNT_CODES.hasOwnProperty(params.inputValue)
-        ? ""
-        : "Incorrect discount code.";
-  }
-  if (errorMessage) {
-    params.output.innerHTML = errorMessage;
-    return true;
-  }
-  return false;
+const isInputNotEmpty = (input) => {
+  return input.value != "" ? true : false;
 };
 
-export { displayModal, closeModal };
+/**
+ * Used to validate if an inputed email is valid
+ *  -> TRUE = VALID
+ *  -> FALSE = NOT VALID
+ * @param {String} email
+ * @returns
+ */
+const isEmailValid = (email) => {
+  return email.toLowerCase().match(REGULAR_EXPRESIONS.email) ? true : false;
+};
+
+/**
+ * Used to display tghe feedback message after inpur validation.
+ * @param {HTMLElement} formBlock
+ * @param {Object} feedback
+ * @param {Boolean} isValid
+ */
+const displayValidationFeedback = (input, feedback, isValid) => {
+  const feedbackBlock = input.nextElementSibling;
+  if (isValid) {
+    feedbackBlock.textContent = feedback.success;
+    feedbackBlock.classList.remove("error");
+    feedbackBlock.classList.add("success");
+  } else {
+    feedbackBlock.textContent = feedback.error;
+    feedbackBlock.classList.remove("success");
+    feedbackBlock.classList.add("error");
+  }
+};
+
+export {
+  displayModal,
+  closeModal,
+  isInputNotEmpty,
+  isEmailValid,
+  displayValidationFeedback,
+};
