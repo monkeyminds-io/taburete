@@ -20,7 +20,7 @@ const setProductCards = (product) => {
   const cloneCard = clone(templateCard);
   const productLink = cloneCard.querySelector('[data-element="product-link"]');
   const image = productLink.querySelector("img");
-  productLink.href = `https://taburete.minimaldesigns.ie/product?name=${product.name
+  productLink.href = `./shop/product.html?name=${product.name
     .toLowerCase()
     .replace(" ", "")}`;
   image.src = product.images.image_1;
