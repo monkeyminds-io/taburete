@@ -1,74 +1,64 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(name="description", content="Taburete | Where your home gets the best furniture and becomes a minimalistic sanctuary.")
-        // Favicon
-        link(rel="shortcut icon", href="./img/logo/favicon.ico", type="image/x-icon")
-        title Taburete | Online shop
-        // CSS Styles
-        link(rel="stylesheet", href="./css/styles.css")
-        // JavaScript Frontend code
-        script(type="text/javascript", src="./js/global.js", defer)
-    body
-        header
-            // Navbar
-            include includes/navbar.pug
-        main
-            // Hero section
-            section.section.section--hero
-                .container
-                    h1.margin--none Shop for your home...
-                    p.text--large.text--neutral--light.margin--bottom--md.
-                        ...to enjoy your home.
-                .image__wrapper.image__wrapper--full-width.height--md--2xs.height--tb--md-xs.height--dk--md-sm
-                    .overlay
-                    img.image(src="./img/shop-hero-image.webp" alt="")
-            // Shop section
-            section.section
-                .container.container--center
-                    .flex.flex--vertical.flex--tb--horizontal.align-items--center.justify-content--center.gap--sm--sm
-                        .drop-down(data-element="drop-down" data-name="category")
-                            .drop-down__handle
-                                span All categories
-                                svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
-                                    path(d="M12 15.5C11.7374 15.5005 11.4772 15.449 11.2346 15.3486C10.9919 15.2483 10.7715 15.1009 10.586 14.915L5.29297 9.62103L6.70697 8.20703L12 13.5L17.293 8.20703L18.707 9.62103L13.414 14.914C13.2285 15.1001 13.0081 15.2476 12.7655 15.3482C12.5228 15.4488 12.2626 15.5004 12 15.5Z" fill="currentColor")
-                            .drop-down__content
-                                .drop-down__option(data-value="all") All
-                                .drop-down__option(data-value="bedroom") Bedroom
-                                .drop-down__option(data-value="living-room") Living room
-                                .drop-down__option(data-value="garden") Garden
-                                .drop-down__option(data-value="dining") Dining
-                        .drop-down(data-element="drop-down" data-name="order")
-                            .drop-down__handle
-                                span Most popular
-                                svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
-                                    path(d="M12 15.5C11.7374 15.5005 11.4772 15.449 11.2346 15.3486C10.9919 15.2483 10.7715 15.1009 10.586 14.915L5.29297 9.62103L6.70697 8.20703L12 13.5L17.293 8.20703L18.707 9.62103L13.414 14.914C13.2285 15.1001 13.0081 15.2476 12.7655 15.3482C12.5228 15.4488 12.2626 15.5004 12 15.5Z" fill="currentColor")
-                            .drop-down__content
-                                .drop-down__option(data-value="most-popular") Most popular
-                                .drop-down__option(data-value="a-z") A-Z
-                                .drop-down__option(data-value="z-a") Z-A
-                                .drop-down__option(data-value="lower-price") Lower price
-                                .drop-down__option(data-value="higher-price") Higher price
-                    .divider.divider--horizontal.margin--top--xs.margin--bottom--xs
-                    .grid.grid--3-columns
-                        .card.card--product(data-component="card-product" data-template="true")
-                            a.card--product__image(href="#" data-element="product-link")
-                                img(src="./img/products/living-room/gurli/image-3.webp" alt="")
-                            .card--product__content
-                                .width--full.padding--bottom--3xs
-                                    .flex.flex--horizontal.align-items--baseline.justify-content--start.gap--sm--3xs
-                                        span.text--large.text.uppercase(data-element="product-name") GURLI
-                                        span.text--small.text--neutral--dark(data-element="product-price") € 12.00
-                                    span.text--neutral--light.text--uppercase(data-element="product-category") Living room
-                                a.button.button--primary(href="#" data-element="add-to-card") Add to card
-            // Testimonials section
-            include includes/testimonials-section.pug
-            // Featured items section
-            include includes/featured-section.pug
-            // CTA section
-            include includes/cta-section.pug
-            // Footer
-            include includes/footer.pug
+extends layouts/layout.pug
+
+block title
+    title Taburete | Online shop
+
+block page-script
+    script(type="module" src="./js/shop-page.js" defer)
+
+block content
+    // Hero section
+    section.section.section--hero
+        .container
+            h1.margin--none Shop for your home...
+            p.text--large.text--neutral--light.margin--bottom--md.
+                ...to enjoy your home.
+        .image__wrapper.image__wrapper--full-width.height--md--2xs.height--tb--md-xs.height--dk--md-sm
+            .overlay
+            img.image(src="./img/shop-hero-image.webp" alt="")
+    // Shop section
+    section.section
+        .container.container--center
+            .flex.flex--vertical.flex--tb--horizontal.justify-content--center.gap--sm--sm.width--full
+                div
+                    p.text--small.text--neutral--light Category selector
+                    .drop-down(data-element="drop-down" data-name="category")
+                        .drop-down__handle(data-element="handle")
+                            span All
+                            svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M12 15.5C11.7374 15.5005 11.4772 15.449 11.2346 15.3486C10.9919 15.2483 10.7715 15.1009 10.586 14.915L5.29297 9.62103L6.70697 8.20703L12 13.5L17.293 8.20703L18.707 9.62103L13.414 14.914C13.2285 15.1001 13.0081 15.2476 12.7655 15.3482C12.5228 15.4488 12.2626 15.5004 12 15.5Z" fill="currentColor")
+                        .drop-down__content(data-element="content")
+                            .drop-down__option(data-value="all" data-text="All") All
+                            .drop-down__option(data-value="bedroom" data-text="Bedroom") Bedroom
+                            .drop-down__option(data-value="living-room" data-text="Living room") Living room
+                            .drop-down__option(data-value="garden" data-text="Garden") Garden
+                            .drop-down__option(data-value="dining" data-text="Dining") Dining
+                div
+                    p.text--small.text--neutral--light Order by
+                    .drop-down(data-element="drop-down" data-name="order")
+                        .drop-down__handle(data-element="handle")
+                            span Most popular
+                            svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M12 15.5C11.7374 15.5005 11.4772 15.449 11.2346 15.3486C10.9919 15.2483 10.7715 15.1009 10.586 14.915L5.29297 9.62103L6.70697 8.20703L12 13.5L17.293 8.20703L18.707 9.62103L13.414 14.914C13.2285 15.1001 13.0081 15.2476 12.7655 15.3482C12.5228 15.4488 12.2626 15.5004 12 15.5Z" fill="currentColor")
+                        .drop-down__content(data-element="content")
+                            .drop-down__option(data-value="most-popular" data-text="Most popular") Most popular
+                            .drop-down__option(data-value="a-z" data-text="A-Z") A-Z
+                            .drop-down__option(data-value="z-a" data-text="Z-A") Z-A
+                            .drop-down__option(data-value="lower-price" data-text="Lower price") Lower price
+                            .drop-down__option(data-value="higher-price" data-text="Higher price") Higher price
+            .divider.divider--horizontal.margin--top--xs.margin--bottom--xs
+            .grid.grid--3-columns
+                .card.card--product(data-component="card-product" data-template="true")
+                    a.card--product__image(href="#" data-element="product-link")
+                        img(src="./img/products/living-room/gurli/image-3.webp" alt="")
+                    .card--product__content
+                        .width--full.padding--bottom--3xs
+                            .flex.flex--horizontal.align-items--baseline.justify-content--start.gap--sm--3xs
+                                span.text--large.text.uppercase(data-element="product-name") GURLI
+                                span.text--small.text--neutral--dark(data-element="product-price") € 12.00
+                            span.text--neutral--light.text--uppercase(data-element="product-category") Living room
+                        a.button.button--primary(href="#" data-element="add-to-card") Add to card
+    // Testimonials section
+    include includes/testimonials-section.pug
+    // Featured items section
+    include includes/featured-section.pug

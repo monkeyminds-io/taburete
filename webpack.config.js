@@ -27,6 +27,7 @@ module.exports = {
   mode: "development", // TODO set to production when publishing
   entry: {
     global: [paths.src.js + "global.js", paths.src.sass + "styles.scss"],
+    "shop-page": paths.src.js + "shop-page.js",
     // [filename]: paths.src.views + '[filename].js'
   },
   output: {

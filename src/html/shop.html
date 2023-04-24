@@ -11,7 +11,8 @@
     <!-- CSS Styles-->
     <link rel="stylesheet" href="./css/styles.css">
     <!-- JavaScript Frontend code-->
-    <script type="text/javascript" src="./js/global.js" defer></script>
+    <script type="module" src="./js/global.js" defer></script>
+    <script type="module" src="./js/shop-page.js" defer></script>
   </head>
   <body>
     <header>
@@ -24,7 +25,7 @@
               <div class="burger__line middle"></div>
               <div class="burger__line bottom"></div>
             </div>
-            <div class="nav__menu" data-element="nav-menu"><a class="nav__link" href="./shop.html" data-page="shop">Shop by room</a><a class="nav__link" href="./contact-us.html" data-page="contact-us">Contact us</a><a class="nav__link" href="./register-login.html" data-page="register-login">Register / Login</a><a class="nav__link" href="./blog.html" data-page="blog">Our blog</a></div>
+            <div class="nav__menu" data-element="nav-menu"><a class="nav__link" href="./shop.html" data-page="shop">Online shop</a><a class="nav__link" href="./contact-us.html" data-page="contact-us">Contact us</a><a class="nav__link" href="./register-login.html" data-page="register-login">Register / Login</a><a class="nav__link" href="./blog.html" data-page="blog">Our blog</a></div>
           </div>
         </div>
       </nav>
@@ -43,33 +44,39 @@
       <!-- Shop section-->
       <section class="section">
         <div class="container container--center">
-          <div class="flex flex--vertical flex--tb--horizontal align-items--center justify-content--center gap--sm--sm">
-            <div class="drop-down" data-element="drop-down" data-name="category">
-              <div class="drop-down__handle"><span>All categories</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 15.5C11.7374 15.5005 11.4772 15.449 11.2346 15.3486C10.9919 15.2483 10.7715 15.1009 10.586 14.915L5.29297 9.62103L6.70697 8.20703L12 13.5L17.293 8.20703L18.707 9.62103L13.414 14.914C13.2285 15.1001 13.0081 15.2476 12.7655 15.3482C12.5228 15.4488 12.2626 15.5004 12 15.5Z" fill="currentColor"></path>
-                </svg>
-              </div>
-              <div class="drop-down__content">
-                <div class="drop-down__option" data-value="all">All</div>
-                <div class="drop-down__option" data-value="bedroom">Bedroom</div>
-                <div class="drop-down__option" data-value="living-room">Living room</div>
-                <div class="drop-down__option" data-value="garden">Garden</div>
-                <div class="drop-down__option" data-value="dining">Dining</div>
+          <div class="flex flex--vertical flex--tb--horizontal justify-content--center gap--sm--sm width--full">
+            <div>
+              <p class="text--small text--neutral--light">Category selector</p>
+              <div class="drop-down" data-element="drop-down" data-name="category">
+                <div class="drop-down__handle" data-element="handle"><span>All</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15.5C11.7374 15.5005 11.4772 15.449 11.2346 15.3486C10.9919 15.2483 10.7715 15.1009 10.586 14.915L5.29297 9.62103L6.70697 8.20703L12 13.5L17.293 8.20703L18.707 9.62103L13.414 14.914C13.2285 15.1001 13.0081 15.2476 12.7655 15.3482C12.5228 15.4488 12.2626 15.5004 12 15.5Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+                <div class="drop-down__content" data-element="content">
+                  <div class="drop-down__option" data-value="all" data-text="All">All</div>
+                  <div class="drop-down__option" data-value="bedroom" data-text="Bedroom">Bedroom</div>
+                  <div class="drop-down__option" data-value="living-room" data-text="Living room">Living room</div>
+                  <div class="drop-down__option" data-value="garden" data-text="Garden">Garden</div>
+                  <div class="drop-down__option" data-value="dining" data-text="Dining">Dining</div>
+                </div>
               </div>
             </div>
-            <div class="drop-down" data-element="drop-down" data-name="order">
-              <div class="drop-down__handle"><span>Most popular</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 15.5C11.7374 15.5005 11.4772 15.449 11.2346 15.3486C10.9919 15.2483 10.7715 15.1009 10.586 14.915L5.29297 9.62103L6.70697 8.20703L12 13.5L17.293 8.20703L18.707 9.62103L13.414 14.914C13.2285 15.1001 13.0081 15.2476 12.7655 15.3482C12.5228 15.4488 12.2626 15.5004 12 15.5Z" fill="currentColor"></path>
-                </svg>
-              </div>
-              <div class="drop-down__content">
-                <div class="drop-down__option" data-value="most-popular">Most popular</div>
-                <div class="drop-down__option" data-value="a-z">A-Z</div>
-                <div class="drop-down__option" data-value="z-a">Z-A</div>
-                <div class="drop-down__option" data-value="lower-price">Lower price</div>
-                <div class="drop-down__option" data-value="higher-price">Higher price</div>
+            <div>
+              <p class="text--small text--neutral--light">Order by</p>
+              <div class="drop-down" data-element="drop-down" data-name="order">
+                <div class="drop-down__handle" data-element="handle"><span>Most popular</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15.5C11.7374 15.5005 11.4772 15.449 11.2346 15.3486C10.9919 15.2483 10.7715 15.1009 10.586 14.915L5.29297 9.62103L6.70697 8.20703L12 13.5L17.293 8.20703L18.707 9.62103L13.414 14.914C13.2285 15.1001 13.0081 15.2476 12.7655 15.3482C12.5228 15.4488 12.2626 15.5004 12 15.5Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+                <div class="drop-down__content" data-element="content">
+                  <div class="drop-down__option" data-value="most-popular" data-text="Most popular">Most popular</div>
+                  <div class="drop-down__option" data-value="a-z" data-text="A-Z">A-Z</div>
+                  <div class="drop-down__option" data-value="z-a" data-text="Z-A">Z-A</div>
+                  <div class="drop-down__option" data-value="lower-price" data-text="Lower price">Lower price</div>
+                  <div class="drop-down__option" data-value="higher-price" data-text="Higher price">Higher price</div>
+                </div>
               </div>
             </div>
           </div>

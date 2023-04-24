@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Taburete | Where your home gets the best furniture and becomes a minimalistic sanctuary.")
+        // Favicon
+        link(rel="shortcut icon" href="./img/logo/favicon.ico" type="image/x-icon")
+        block title
+        // CSS Styles
+        link(rel="stylesheet" href="./css/styles.css")
+        // JavaScript Frontend code
+        script(type="module" src="./js/global.js" defer)
+        block page-script
+    body
+        header
+            // Navbar
+            include ../includes/navbar.pug
+        main
+            block content
+            // CTA section
+            include ../includes/cta-section.pug
+            // Footer
+            include ../includes/footer.pug

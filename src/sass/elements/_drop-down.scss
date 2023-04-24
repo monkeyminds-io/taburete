@@ -2,11 +2,16 @@
 .drop-down {
   display: flex;
   flex-direction: column;
-  width: 240px;
+  width: 100%;
   height: 48px;
   overflow: hidden;
   background-color: neutral("white");
   border: 1px solid neutral("light");
+  transition: height 0.32s ease-in-out;
+
+  &.opened {
+    height: 274.97px;
+  }
 
   &__handle {
     display: flex;
@@ -24,6 +29,13 @@
     color: neutral("black");
     cursor: pointer;
     transition: color 0.32s ease-in-out;
+
+    svg {
+      transition: transform 0.32s ease-in-out;
+      &.opened {
+        transform: rotateZ(180deg);
+      }
+    }
 
     /* RESPONSIVENESS */
     // Desktop
@@ -51,5 +63,11 @@
         background-color: brand("secondary");
       }
     }
+  }
+
+  /* RESPONSIVENESS */
+  // Tablet
+  @include responsive(sm) {
+    width: 240px;
   }
 }

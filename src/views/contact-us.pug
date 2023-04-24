@@ -1,17 +1,6 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(name="description", content="Taburete | Where your home gets the best furniture and becomes a minimalistic sanctuary.")
-        // Favicon
-        link(rel="shortcut icon", href="./img/logo/favicon.png", type="image/x-icon")
-        title Taburete | Contact us
-        // CSS Styles
-        link(rel="stylesheet", href="./css/styles.css")
-        // JavaScript Frontend code
-        script(type="text/javascript", src="./js/global.js", defer)
-    body
-        header
-            include includes/navbar.pug
+extends layouts/layout.pug
+
+block title
+    title Taburete | Contact us
+
+block content
