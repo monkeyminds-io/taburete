@@ -20,7 +20,7 @@ const setProductCards = (product) => {
   const cloneCard = clone(templateCard);
   const productLink = cloneCard.querySelector('[data-element="product-link"]');
   const image = productLink.querySelector("img");
-  productLink.href = `127.0.0.1/dist/product?name=${product.name
+  productLink.href = `https://taburete.minimaldesigns.ie/product?name=${product.name
     .toLowerCase()
     .replace(" ", "")}`;
   image.src = product.images.image_1;
@@ -35,9 +35,11 @@ const setProductCards = (product) => {
 };
 
 // LOGIC ////////////////
-fetchJson("/dist/data/products.json").then((response) => {
-  const products = response.data.products;
-  products.forEach((product) => {
-    setProductCards(product);
-  });
-});
+fetchJson("https://taburete.minimaldesigns.ie/data/products.json").then(
+  (response) => {
+    const products = response.data.products;
+    products.forEach((product) => {
+      setProductCards(product);
+    });
+  }
+);
