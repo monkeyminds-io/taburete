@@ -57,7 +57,10 @@
       // Tablet
       @include responsive(sm) {
         height: auto;
+      }
 
+      // Desktop
+      @include responsive(md) {
         &.hovering {
           img {
             transform: scale(128%);
@@ -208,6 +211,42 @@
       // Tablet
       @include responsive(sm) {
         padding: 16px 32px;
+      }
+    }
+  }
+
+  &--product {
+    &__image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 240px;
+      overflow: hidden;
+
+      img {
+        transition: transform 0.32s ease-in-out;
+      }
+
+      /* RESPONSIVENESS */
+      // Desktop
+      @include responsive(md) {
+        &.hovering {
+          img {
+            transform: scale(128%);
+          }
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 16px 24px;
+
+      a {
+        width: 100% !important;
       }
     }
   }

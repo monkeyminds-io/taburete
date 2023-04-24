@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Taburete | Where your home gets the best furniture and becomes a minimalistic sanctuary.">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="./img/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo/favicon.ico" type="image/x-icon">
     <title>Taburete | Online shop</title>
     <!-- CSS Styles-->
     <link rel="stylesheet" href="./css/styles.css">
     <!-- JavaScript Frontend code-->
-    <script type="text/javascript" src="./js/global.js" defer></script>
+    <script type="module" src="./js/global.js" defer></script>
+    <script type="module" src="./js/shop-page.js" defer></script>
   </head>
   <body>
     <header>
+      <!-- Navbar-->
       <nav class="section section--nav" data-component="navbar">
         <div class="container container--nav"><a class="nav__brand" href="./"><img src="./img/logo/primary.svg" alt="Taburete logo"></a>
           <div class="nav__wrapper"><a class="nav__cart-icon" href="#"><img src="./img/icons/cart-icon.svg" alt="Cart icon"></a>
@@ -23,10 +25,237 @@
               <div class="burger__line middle"></div>
               <div class="burger__line bottom"></div>
             </div>
-            <div class="nav__menu" data-element="nav-menu"><a class="nav__link" href="./shop.html" data-page="shop">Shop by room</a><a class="nav__link" href="./contact-us.html" data-page="contact-us">Contact us</a><a class="nav__link" href="./register-login.html" data-page="register-login">Register / Login</a><a class="nav__link" href="./blog.html" data-page="blog">Our blog</a></div>
+            <div class="nav__menu" data-element="nav-menu"><a class="nav__link" href="./shop.html" data-page="shop">Online shop</a><a class="nav__link" href="./contact-us.html" data-page="contact-us">Contact us</a><a class="nav__link" href="./register-login.html" data-page="register-login">Register / Login</a><a class="nav__link" href="./blog.html" data-page="blog">Our blog</a></div>
           </div>
         </div>
       </nav>
     </header>
+    <main>
+      <!-- Hero section-->
+      <section class="section section--hero">
+        <div class="container">
+          <h1 class="margin--none">Shop for your home...</h1>
+          <p class="text--large text--neutral--light margin--bottom--md">...to enjoy your home.</p>
+        </div>
+        <div class="image__wrapper image__wrapper--full-width height--md--2xs height--tb--md-xs height--dk--md-sm">
+          <div class="overlay"></div><img class="image" src="./img/shop-hero-image.webp" alt="">
+        </div>
+      </section>
+      <!-- Shop section-->
+      <section class="section">
+        <div class="container container--center">
+          <div class="flex flex--vertical flex--tb--horizontal justify-content--center gap--sm--sm width--full">
+            <div>
+              <p class="text--small text--neutral--light">Category selector</p>
+              <div class="drop-down" data-element="drop-down" data-name="category">
+                <div class="drop-down__handle" data-element="handle"><span>All</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15.5C11.7374 15.5005 11.4772 15.449 11.2346 15.3486C10.9919 15.2483 10.7715 15.1009 10.586 14.915L5.29297 9.62103L6.70697 8.20703L12 13.5L17.293 8.20703L18.707 9.62103L13.414 14.914C13.2285 15.1001 13.0081 15.2476 12.7655 15.3482C12.5228 15.4488 12.2626 15.5004 12 15.5Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+                <div class="drop-down__content" data-element="content">
+                  <div class="drop-down__option" data-value="all" data-text="All">All</div>
+                  <div class="drop-down__option" data-value="bedroom" data-text="Bedroom">Bedroom</div>
+                  <div class="drop-down__option" data-value="living-room" data-text="Living room">Living room</div>
+                  <div class="drop-down__option" data-value="garden" data-text="Garden">Garden</div>
+                  <div class="drop-down__option" data-value="dining" data-text="Dining">Dining</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p class="text--small text--neutral--light">Order by</p>
+              <div class="drop-down" data-element="drop-down" data-name="order">
+                <div class="drop-down__handle" data-element="handle"><span>Most popular</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15.5C11.7374 15.5005 11.4772 15.449 11.2346 15.3486C10.9919 15.2483 10.7715 15.1009 10.586 14.915L5.29297 9.62103L6.70697 8.20703L12 13.5L17.293 8.20703L18.707 9.62103L13.414 14.914C13.2285 15.1001 13.0081 15.2476 12.7655 15.3482C12.5228 15.4488 12.2626 15.5004 12 15.5Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+                <div class="drop-down__content" data-element="content">
+                  <div class="drop-down__option" data-value="most-popular" data-text="Most popular">Most popular</div>
+                  <div class="drop-down__option" data-value="a-z" data-text="A-Z">A-Z</div>
+                  <div class="drop-down__option" data-value="z-a" data-text="Z-A">Z-A</div>
+                  <div class="drop-down__option" data-value="lower-price" data-text="Lower price">Lower price</div>
+                  <div class="drop-down__option" data-value="higher-price" data-text="Higher price">Higher price</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider divider--horizontal margin--top--xs margin--bottom--xs"></div>
+          <div class="grid grid--3-columns">
+            <div class="card card--product" data-component="card-product" data-template="true"><a class="card--product__image" href="#" data-element="product-link"><img src="./img/products/living-room/gurli/image-3.webp" alt=""></a>
+              <div class="card--product__content">
+                <div class="width--full padding--bottom--3xs">
+                  <div class="flex flex--horizontal align-items--baseline justify-content--start gap--sm--3xs"><span class="text--large text uppercase" data-element="product-name">GURLI</span><span class="text--small text--neutral--dark" data-element="product-price">€ 12.00</span></div><span class="text--neutral--light text--uppercase" data-element="product-category">Living room</span>
+                </div><a class="button button--primary" href="#" data-element="add-to-card">Add to card</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials section-->
+      <section class="section">
+        <div class="container container--center">
+          <h2 class="text--center">Testimonials</h2>
+          <div class="slider slider--testimonials" data-component="slider">
+            <div class="slider__mask" data-element="slider-mask">
+              <div class="card card--testimonial">
+                <div class="card--testimonial__client">
+                  <div class="client__rating"><img src="./img/icons/star-icon.svg"><img src="./img/icons/star-icon.svg"><img src="./img/icons/star-icon.svg"><img src="./img/icons/star-icon.svg"><img src="./img/icons/star-icon.svg"></div>
+                  <div class="client__info">
+                    <div class="client__avatar"><img src="./img/clients/jane-cooper.png"></div>
+                    <div class="client__id">
+                      <p>Jane Cooper</p>
+                      <div class="job-title">Medical Assistant</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card--testimonial__review">
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis turpis nisi, justo, integer dignissim ornare leo euismod ac."</p>
+                </div>
+              </div>
+              <div class="card card--testimonial">
+                <div class="card--testimonial__client">
+                  <div class="client__rating"><img src="./img/icons/star-icon.svg"><img src="./img/icons/star-icon.svg"><img src="./img/icons/star-icon.svg"><img src="./img/icons/star-icon.svg"><img src="./img/icons/star-icon.svg"></div>
+                  <div class="client__info">
+                    <div class="client__avatar"><img src="./img/clients/guy-hawkins.png"></div>
+                    <div class="client__id">
+                      <p>Guy Hawkins</p>
+                      <div class="job-title">Marketing Coordinator</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card--testimonial__review">
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis turpis nisi, justo, integer dignissim ornare leo euismod ac."</p>
+                </div>
+              </div>
+              <div class="card card--testimonial">
+                <div class="card--testimonial__client">
+                  <div class="client__rating"><img src="./img/icons/star-icon.svg"><img src="./img/icons/star-icon.svg"><img src="./img/icons/star-icon.svg"><img src="./img/icons/star-icon.svg"><img src="./img/icons/star-icon.svg"></div>
+                  <div class="client__info">
+                    <div class="client__avatar"><img src="./img/clients/jenny-wilson.png"></div>
+                    <div class="client__id">
+                      <p>Jenny Wilson</p>
+                      <div class="job-title">Dog Trainer</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card--testimonial__review">
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis turpis nisi, justo, integer dignissim ornare leo euismod ac."</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__dots">
+              <div class="dot active" data-element="dot" data-is-active="true"></div>
+              <div class="dot" data-element="dot" data-is-active="false"></div>
+              <div class="dot" data-element="dot" data-is-active="false"></div>
+            </div>
+            <div class="slider__nav"><a class="button button--slider-nav disabled" href="#" data-element="button-previous" disabled><img src="./img/icons/arrow-left-icon.svg"></a><a class="button button--slider-nav" href="#" data-element="button-next"><img src="./img/icons/arrow-right-icon.svg"></a></div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured items section-->
+      <section class="section">
+        <div class="container container--flex container--flex--tb-horizontal gap--sm--sm">
+          <div class="flex flex--vertical align-items--start width--tb--md-sm width--dk--md-md padding--top--2xs">
+            <h2 class="margin--bottom--xs">Trendy furniture</h2>
+            <p class="margin--bottom--md">These are the top 3 sales that our clients are buying. We have more furniture, but these are hot and making people happy. You can have a look at their descriptions and decide... or you can add them to your cart straight away!!</p><a class="button button--primary" href="./shop.html">Shop online now</a>
+          </div>
+          <div class="slider__wrapper">
+            <div class="overlay right"></div>
+            <div class="overlay left"></div>
+            <div class="slider slider--featured-items" data-component="slider">
+              <div class="slider__mask" data-element="slider-mask">
+                <div class="card card--featured-item">
+                  <div class="card--featured-item__image"><img src="./img/products/bedroom/tufjord/image-3.webp" alt="Side image if Tufjord bed."></div>
+                  <div class="card--featured-item__info">
+                    <div class="width--full">
+                      <div class="flex flex--horizontal align-items--baseline justify-content--start gap--sm--3xs"><span class="text--uppercase">Tufjord</span><span class="text--small text--bold">€ 750.00</span></div>
+                      <div class="text--neutral--light text--uppercase">Bedroom</div>
+                    </div><a class="button button--secondary" href="#">Add to cart 
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.219 14.1146L17.495 8.39059L15.6097 10.2759L20.0003 14.6666H6.66699V17.3333H20.0003L15.6097 21.7239L17.495 23.6093L23.219 17.8853C23.7189 17.3852 23.9998 16.707 23.9998 15.9999C23.9998 15.2928 23.7189 14.6147 23.219 14.1146V14.1146Z" fill="currentColor"></path>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="card card--featured-item">
+                  <div class="card--featured-item__image"><img src="./img/products/garden/kolbjorn/image-2.webp" alt="Image of opened garden storage Kolbjorn."></div>
+                  <div class="card--featured-item__info">
+                    <div class="width--full">
+                      <div class="flex flex--horizontal align-items--baseline justify-content--start gap--sm--3xs"><span class="text--uppercase">KOLBJÖRN</span><span class="text--small text--bold">€ 179.00</span></div>
+                      <div class="text--neutral--light text--uppercase">Garden</div>
+                    </div><a class="button button--secondary" href="#">Add to cart 
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.219 14.1146L17.495 8.39059L15.6097 10.2759L20.0003 14.6666H6.66699V17.3333H20.0003L15.6097 21.7239L17.495 23.6093L23.219 17.8853C23.7189 17.3852 23.9998 16.707 23.9998 15.9999C23.9998 15.2928 23.7189 14.6147 23.219 14.1146V14.1146Z" fill="currentColor"></path>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="card card--featured-item">
+                  <div class="card--featured-item__image"><img src="./img/products/living-room/gurli/image-3.webp" alt="Image of the blanquet Gurli on the sofa."></div>
+                  <div class="card--featured-item__info">
+                    <div class="width--full">
+                      <div class="flex flex--horizontal align-items--baseline justify-content--start gap--sm--3xs"><span class="text--uppercase">Gurli</span><span class="text--small text--bold">€ 12.00</span></div>
+                      <div class="text--neutral--light text--uppercase">Living room</div>
+                    </div><a class="button button--secondary" href="#">Add to cart 
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.219 14.1146L17.495 8.39059L15.6097 10.2759L20.0003 14.6666H6.66699V17.3333H20.0003L15.6097 21.7239L17.495 23.6093L23.219 17.8853C23.7189 17.3852 23.9998 16.707 23.9998 15.9999C23.9998 15.2928 23.7189 14.6147 23.219 14.1146V14.1146Z" fill="currentColor"></path>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__dots">
+                <div class="dot active" data-element="dot" data-is-active="true"></div>
+                <div class="dot" data-element="dot" data-is-active="false"></div>
+                <div class="dot" data-element="dot" data-is-active="false"></div>
+              </div>
+              <div class="slider__nav"><a class="button button--slider-nav disabled" href="#" data-element="button-previous" disabled><img src="./img/icons/arrow-left-icon.svg"></a><a class="button button--slider-nav" href="#" data-element="button-next"><img src="./img/icons/arrow-right-icon.svg"></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA section-->
+      <section class="section section--cta">
+        <div class="container container--center">
+          <h2 class="text--center margin--bottom--xs">Subscribe to our newsletter</h2>
+          <p class="text--neutral--dark text--center width--dk--md-2xl margin--bottom--md">Subscribe to our newsletter and get 20% off your next purchase. Plus you’ll get in your inbox some interesting articles on interior design, trends and lots of discounts!!</p>
+          <form class="form form--horizontal form--newsletter" method="POST" action="" data-component="newsletter-form">
+            <div class="form__block">
+              <input class="input" type="text" name="email" id="email" placeholder="joedoe@gmail.com"><span class="form__feedback"></span>
+            </div>
+            <input class="button button--primary" type="submit" value="Subscribe now!" name="submit" id="submit">
+          </form>
+        </div>
+      </section>
+      <!-- Modal subscription successful-->
+      <div class="modal hidden" data-component="newsletter-modal">
+        <h3>You are registered!!</h3>
+        <p class="margin--bottom--md">Thanks for registering to our newsletter!!</p><a class="button button--primary" href="#">Close window</a>
+      </div>
+      <!-- Modal overlay-->
+      <div class="background-overlay hidden" data-component="overlay"></div>
+      <!-- Footer-->
+      <section class="section section--footer">
+        <div class="container container--center">
+          <div class="divider divider--horizontal"></div>
+          <div class="footer__nav"><a class="footer__brand" href="/index.html"><img src="./img/logo/primary.svg" alt="Taburete logo"></a>
+            <div class="footer__menu"><a class="footer__link" href="/shop.html">Shop</a><a class="footer__link" href="/shop.html">Blog</a><a class="footer__link" href="/shop.html">Contact us</a><a class="footer__link" href="/shop.html">Terms & Conditions</a><a class="footer__link" href="/shop.html">Privacy</a></div>
+            <div class="social-media__block"><a class="social-media__link" href="https://www.twitter.com" target="_blank">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M30.6666 4.00022C29.3898 4.90086 27.9761 5.5897 26.4799 6.04022C25.6769 5.11691 24.6097 4.46248 23.4226 4.16546C22.2356 3.86844 20.9859 3.94315 19.8427 4.3795C18.6995 4.81584 17.7178 5.59276 17.0306 6.60518C16.3433 7.6176 15.9835 8.81667 15.9999 10.0402V11.3736C13.6568 11.4343 11.335 10.9146 9.24126 9.86082C7.14758 8.807 5.34701 7.25174 3.99992 5.33356C3.99992 5.33356 -1.33341 17.3336 10.6666 22.6669C7.92062 24.5308 4.64946 25.4655 1.33325 25.3336C13.3333 32.0002 27.9999 25.3336 27.9999 10.0002C27.9987 9.62883 27.963 9.25835 27.8933 8.89356C29.2541 7.55155 30.2144 5.85717 30.6666 4.00022Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></a><a class="social-media__link" href="https://www.instagram.com" target="_blank">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.6667 2.6665H9.33341C5.65152 2.6665 2.66675 5.65127 2.66675 9.33317V22.6665C2.66675 26.3484 5.65152 29.3332 9.33341 29.3332H22.6667C26.3486 29.3332 29.3334 26.3484 29.3334 22.6665V9.33317C29.3334 5.65127 26.3486 2.6665 22.6667 2.6665Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M21.3334 15.1599C21.4979 16.2696 21.3084 17.4029 20.7917 18.3986C20.275 19.3943 19.4575 20.2018 18.4555 20.7061C17.4535 21.2105 16.3179 21.386 15.2104 21.2078C14.1029 21.0296 13.0797 20.5067 12.2865 19.7135C11.4932 18.9202 10.9703 17.8971 10.7921 16.7895C10.6139 15.682 10.7894 14.5464 11.2938 13.5444C11.7981 12.5424 12.6056 11.7249 13.6013 11.2082C14.5971 10.6916 15.7304 10.502 16.84 10.6666C17.9719 10.8344 19.0198 11.3619 19.8289 12.171C20.6381 12.9801 21.1655 14.028 21.3334 15.1599Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M23.3333 8.6665H23.3466" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></a><a class="social-media__link" href="https://www.linkedin.com" target="_blank">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.3333 10.6665C23.455 10.6665 25.4898 11.5094 26.9901 13.0096C28.4904 14.5099 29.3333 16.5448 29.3333 18.6665V27.9998H23.9999V18.6665C23.9999 17.9593 23.719 17.281 23.2189 16.7809C22.7188 16.2808 22.0405 15.9998 21.3333 15.9998C20.626 15.9998 19.9477 16.2808 19.4476 16.7809C18.9475 17.281 18.6666 17.9593 18.6666 18.6665V27.9998H13.3333V18.6665C13.3333 16.5448 14.1761 14.5099 15.6764 13.0096C17.1767 11.5094 19.2115 10.6665 21.3333 10.6665Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M8.00008 12H2.66675V28H8.00008V12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M5.33341 7.99984C6.80617 7.99984 8.00008 6.80593 8.00008 5.33317C8.00008 3.86041 6.80617 2.6665 5.33341 2.6665C3.86066 2.6665 2.66675 3.86041 2.66675 5.33317C2.66675 6.80593 3.86066 7.99984 5.33341 7.99984Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></a></div>
+          </div>
+          <p class="text--small text--center text--neutral--dark">&copy; 2023 <a class="link" href="https://www.minimaldesigns.ie" target="_blank">Minima Designs</a>. All rights reserved.</p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

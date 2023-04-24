@@ -54,6 +54,12 @@ const validateEmail = (emailInput) => {
   }
 };
 
+/**
+ * Used to reset the form input values.
+ * @param {HTMLElement} emailInput
+ * @param {HTMLElement} modal
+ * @param {HTMLElement} overlay
+ */
 const resetForm = (emailInput, modal, overlay) => {
   closeModal(modal, overlay);
   emailInput.value = "";

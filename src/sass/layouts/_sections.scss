@@ -13,8 +13,7 @@
 
   &--nav {
     padding: 24px 0;
-    transition: padding 0.32s ease-in-out, background-color 0.32s ease-in-out,
-      box-shadow 0.32s ease-in-out;
+    transition: background-color 0.32s ease-in-out, box-shadow 0.32s ease-in-out;
 
     &.white {
       background-color: neutral("white");
@@ -28,13 +27,17 @@
   }
 
   &--hero {
-    padding: 160px 0 80px;
+    padding: 160px 0 0;
     overflow: hidden;
-    background: radial-gradient(
-      100% 316.05% at 100% 100%,
-      #3b839d 0%,
-      #8fdcf9 100%
-    );
+
+    &--home {
+      padding: 160px 0 80px;
+      background: radial-gradient(
+        100% 316.05% at 100% 100%,
+        #3b839d 0%,
+        #8fdcf9 100%
+      );
+    }
   }
 
   &--about {

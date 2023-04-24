@@ -1,0 +1,113 @@
+{
+  "ok": true,
+  "status": 200,
+  "data": {
+    "products": [
+      {
+        "name": "TUFJORD",
+        "price": "750.00",
+        "category": "bedroom",
+        "shortDescription": "TUFJORD will make you long for bedtime. The headboard’s embracing curves help you to unwind, and make lazy mornings spent in bed even cosier. And the soft, textured upholstery enhances the comfy feel.",
+        "longDescription": "The curved headboard is great for cosy, cocooning moments, helping you to unwind and relax in bed. The headboard is comfortable to lean against ⎼ ideal for lazy mornings in bed drinking coffee and reading. The upholstery has a perfect fit all around the bed, making it pleasing to look at from all angles and great to position in the centre of a room. The soft, textured upholstery has a two-toned melange effect. The shaped metal legs are strong and stable and add to the bed´s character. There’s plenty of space under the bed for storage boxes - perfect for storing extra quilts and pillows. You can easily vacuum under the bed frame to keep the space clean and dust-free. Adjustable bed sides allow you to use mattresses of different thicknesses.",
+        "designer": "Ola Wihlborg",
+        "images": {
+          "image_1": "./img/products/bedroom/tufjord/image-1.webp",
+          "image_2": "./img/products/bedroom/tufjord/image-2.webp",
+          "image_3": "./img/products/bedroom/tufjord/image-3.webp",
+          "image_4": "./img/products/bedroom/tufjord/image-4.webp"
+        },
+        "rate": "4"
+      },
+      {
+        "name": "GLADSTAD",
+        "price": "219.00",
+        "category": "bedroom",
+        "shortDescription": "The GLADSTAD upholstered bed frame has a clean and modern design, while being comfortable and inviting with its padded headboard and soft cover with a slight texture. Sleep tight – in style!",
+        "longDescription": "The GLADSTAD upholstered bed frame is a modern classic with a clean and sleek design. The padded headboard serves as a comfortable backrest, for example when reading or enjoying your weekend breakfast in bed. The soft KABUSA cover has a slight texture and is woven with threads in 3 different grey tones that hide light stains. The simple and versatile design coordinates well with other bedroom furniture and fits perfectly in any modern bedroom. You can easily vacuum under the bed frame to keep the space clean and dust-free. There’s plenty of space under the bed for storage boxes – great for stowing extra quilts and sheets.",
+        "designer": "Ola Wihlborg",
+        "images": {
+          "image_1": "./img/products/bedroom/gladstad/image-1.webp",
+          "image_2": "./img/products/bedroom/gladstad/image-2.webp",
+          "image_3": "./img/products/bedroom/gladstad/image-3.webp",
+          "image_4": "./img/products/bedroom/gladstad/image-4.webp"
+        },
+        "rate": "5"
+      },
+      {
+        "name": "NORDLI",
+        "price": "470.00",
+        "category": "bedroom",
+        "shortDescription": "You can build NORDLI chest of drawers any which way – wide, low or in different heights to create the perfect solution for your space. The clean modern look is easy to place. Psst! Please attach to the wall.",
+        "longDescription": "Of course your home should be a safe place for the entire family. That’s why a safety fitting is included so that you can attach the chest of drawers to the wall. You can use one modular chest of drawers or combine several to get a storage solution that perfectly suits your space. You can easily create your own personal design by mixing chests of different colours. Integrated damper catches the running drawer and closes it slowly, silently and softly. The concealed drawer runners ensure that drawers run smoothly even when heavily loaded. Adjustable feet make it possible to compensate any irregularities in the floor.",
+        "designer": "Ola Wihlborg",
+        "images": {
+          "image_1": "./img/products/bedroom/nordli/image-1.webp",
+          "image_2": "./img/products/bedroom/nordli/image-2.webp",
+          "image_3": "./img/products/bedroom/nordli/image-3.webp",
+          "image_4": "./img/products/bedroom/nordli/image-4.webp"
+        },
+        "rate": "4"
+      },
+      {
+        "name": "VIKHAMMER",
+        "price": "70.00",
+        "category": "bedroom",
+        "shortDescription": "A clean, simple design that fits nicely next to high beds. If a good book has kept you up late, you can quietly tuck it away in one of the soft-closing drawers without waking anyone.",
+        "longDescription": "The drawers close silently and softly, thanks to the integrated soft-closing function.",
+        "designer": "Marcus Arvonen",
+        "images": {
+          "image_1": "./img/products/bedroom/vikhammer/image-1.webp",
+          "image_2": "./img/products/bedroom/vikhammer/image-2.webp",
+          "image_3": "./img/products/bedroom/vikhammer/image-3.webp",
+          "image_4": "./img/products/bedroom/vikhammer/image-4.webp"
+        },
+        "rate": "3"
+      },
+      {
+        "name": "LUKTJASMIN",
+        "price": "50.00",
+        "category": "bedroom",
+        "shortDescription": "Like a dream – a silky-smooth duvet cover set in golden yellow with a beautiful lustre. Sateen-woven from the finest yarn made of cotton and lyocell. Natural materials that feel soft against your skin.",
+        "longDescription": "The duvet cover is sateen-woven, giving it a pronounced lustre that looks beautiful on your bed. Made from cotton and lyocell – soft and natural materials that feel comfortable against your skin. The buttons keep the duvet in place. Pillowcase with envelope closing.",
+        "designer": "Joe Doe",
+        "images": {
+          "image_1": "./img/products/bedroom/luktjasmin/image-1.webp",
+          "image_2": "./img/products/bedroom/luktjasmin/image-2.webp",
+          "image_3": "./img/products/bedroom/luktjasmin/image-3.webp",
+          "image_4": "./img/products/bedroom/luktjasmin/image-4.webp"
+        },
+        "rate": "3"
+      },
+      {
+        "name": "BLÅKULLEN",
+        "price": "229.00",
+        "category": "bedroom",
+        "shortDescription": "Ideal for compact living – a comfy bed and sofa in one! This bed frame is upholstered all around, the headboard makes a cosy corner for reading or watching movies, and it all comes in 1 convenient package.",
+        "longDescription": "BLÅKULLEN is a versatile bed frame which you can use for sleeping, relaxing and hanging out with friends – place it in the bedroom, living room or any room of choice. The corner headboard makes a comfortable and cosy backrest and can be mounted on either side of the frame. The bed frame is upholstered all around, so you can place it wherever you like in the room. Combine with a mattress you like which has the right level of comfort, so you enjoy a good night's sleep. You can easily vacuum under the bed frame to keep the space clean and dust-free. There’s plenty of space under the bed for storage boxes - perfect for storing extra quilts and pillows.",
+        "designer": "Joe Doe",
+        "images": {
+          "image_1": "./img/products/bedroom/blakullen/image-1.webp",
+          "image_2": "./img/products/bedroom/blakullen/image-2.webp",
+          "image_3": "./img/products/bedroom/blakullen/image-3.webp",
+          "image_4": "./img/products/bedroom/blakullen/image-4.webp"
+        },
+        "rate": "3"
+      },
+      {
+        "name": "SMEDSTORP",
+        "price": "799.00",
+        "category": "living room",
+        "shortDescription": "A sofa for those who like soft shapes of the past, but want modern comfort. Enjoy resilient foam cushions, comfortable armrests and cone-shaped legs in a lovely retro style that lasts for many years.",
+        "longDescription": "Just as nice to look at from all sides – perfect to place in the middle of the room or use as a room divider. High resilience foam makes the sofa soft and cosy, while it also gives comfortable support for your body and quickly regains its shape when you stand up. This comfortable sofa has pocket spring seat cushions with high resilience foam and a top layer of wadding. It provides a nice comfort and support for your body while maintaining the shape of the seat cushions. High resilience foam in seat for extra great comfort. High legs make it easy to clean the floor under the sofa. The durable, easy-care fabric Viarp is woven from cotton and recycled polyester, which reduces the risk of pilling – and its mélange effect makes it less sensitive to stains. 10 year guarantee. Read about the terms in the guarantee brochure.",
+        "designer": "Joe Doe",
+        "images": {
+          "image_1": "./img/products/bedroom/blakullen/image-1.webp",
+          "image_2": "./img/products/bedroom/blakullen/image-2.webp",
+          "image_3": "./img/products/bedroom/blakullen/image-3.webp",
+          "image_4": "./img/products/bedroom/blakullen/image-4.webp"
+        },
+        "rate": "3"
+      }
+    ]
+  }
+}

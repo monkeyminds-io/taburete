@@ -1,0 +1,123 @@
+extends layouts/layout.pug
+
+block title
+    title Taburete | Your shop for your home
+
+block content
+    // Hero section
+    section.section.section--hero.section--hero--home
+        .container.container--flex.container--flex--tb-horizontal
+            .flex.flex--vertical.align-items--start.width--tb--md-sm.width--dk--md-lg
+                h1 Minimal furniture for everyday
+                p.text--neutral--dark.margin--bottom--md.
+                    Your home is your sanctuary, your peaceful oasis, where you go to rest your mind and body. Our furniture will give you peace, serenity and comfort.
+                a.button.button--primary(href="./shop.html") Shop online now
+            .image__wrapper.image__wrapper--hero
+                // Image from Unsplash License Free image by Inside Weather
+                img.image.image--hero(src="./img/hero-image.png", alt="Photo by Inside Weather on Unsplash")
+    // Categories section
+    section.section
+        .container.container--center
+            h2.text--center Categories
+            .grid.grid--2-columns.width--max--md-4xl
+                a.card.card--category(href='./shop.html?bedroom', data-component="category-card")
+                    .card--category__overlay(data-element="ovelay")
+                        span Bedrooom
+                    .card--category__background(data-element="background")
+                        img(src='./img/bedroom-image.webp', alt='Bedroom main image')
+                a.card.card--category(href='./shop.html?living-room', data-component="category-card")
+                    .card--category__overlay(data-element="ovelay")
+                        span Living room
+                    .card--category__background(data-element="background")
+                        img.card--category__image(src='./img/living_room-image.webp', alt='Living room main image')
+                a.card.card--category(href='./shop.html?garden', data-component="category-card")
+                    .card--category__overlay(data-element="ovelay")
+                        span Garden
+                    .card--category__background(data-element="background")
+                        img.card--category__image(src='./img/garden-image.webp', alt='Garden main image')
+                a.card.card--category(href='./shop.html?dining', data-component="category-card")
+                    .card--category__overlay(data-element="ovelay")
+                        span Dining
+                    .card--category__background(data-element="background")
+                        img.card--category__image(src='./img/dining-image.webp', alt='Dining main image')
+    // Testimonials section
+    include includes/testimonials-section.pug
+    // Featured section
+    include includes/featured-section.pug
+    // About section
+    section.section.section--about
+        .container.container--flex.container--flex--dk-horizontal.padding--left--none
+            .image__wrapper.image__wrapper--about
+                // Image from Unsplash License Free image by Christelle BOURGEOIS
+                img.image.image--about(src="./img/about-image.png", alt="Photo by Christelle BOURGEOIS on Unsplash")
+            .flex.flex--vertical.align-items--start.padding--top--md.padding--tb--top-none.padding--dk--top-4xl.padding--bottom--md.padding--tb--bottom-4xl.padding--left--2xs.padding--ml--left-xs.padding--tb--left-md.padding--dk--left-none.padding--right--2xs.padding--ml--right-xs.padding--tb--right-md.padding--dk--right-none
+                h2.margin--bottom--xs About us
+                p.margin--bottom--2xs.
+                    In Taburete we think of you all the time. We want to design your home’s furniture. We live to help create your peaceful retreat. That one you call home.
+                p.margin--bottom--2xs.
+                    Our main goal is to inspire you, to motivate you, to make your home a better place to life and relax. We want you to make great memories. Memories that will live for ever. that will go from generation to generation to generation.
+                p.margin--bottom--md.
+                    Thanks to our amazing team of designers (and all the people in the office 😅) we can say that you will always get the latest trends in furniture design. But always with our minimalistic spirit.
+                a.button.button--primary(href="./shop.html") Shop online now
+    // Blog section
+    section.section
+        .container.container--center
+            h2 Our last posts
+            .grid.grid--3-columns.margin--bottom--md
+                .card.card--post
+                    .card--post__image
+                        // Image from IKEA blog
+                        img(src="./img/blog/decorate-home-office.webp", alt="Image from IKEA blog.")
+                    .card--post__body
+                        p.text--large.width--full.
+                            5 ideas to decorate your home office
+                        a.button.button--secondary(href="#") Go to post
+                            svg(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M23.219 14.1146L17.495 8.39059L15.6097 10.2759L20.0003 14.6666H6.66699V17.3333H20.0003L15.6097 21.7239L17.495 23.6093L23.219 17.8853C23.7189 17.3852 23.9998 16.707 23.9998 15.9999C23.9998 15.2928 23.7189 14.6147 23.219 14.1146V14.1146Z" fill="currentColor")
+                .card.card--post
+                    .card--post__image
+                        // Image from IKEA blog
+                        img(src="./img/blog/balance-with-nature.webp", alt="Image from IKEA blog.")
+                    .card--post__body
+                        p.text--large.width--full.
+                            How to build a better balance with nature
+                        a.button.button--secondary(href="#") Go to post
+                            svg(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M23.219 14.1146L17.495 8.39059L15.6097 10.2759L20.0003 14.6666H6.66699V17.3333H20.0003L15.6097 21.7239L17.495 23.6093L23.219 17.8853C23.7189 17.3852 23.9998 16.707 23.9998 15.9999C23.9998 15.2928 23.7189 14.6147 23.219 14.1146V14.1146Z" fill="currentColor")
+                .card.card--post
+                    .card--post__image
+                        // Image from IKEA blog
+                        img(src="./img/blog/colourful-ways.webp", alt="Image from IKEA blog.")
+                    .card--post__body
+                        p.text--large.width--full.
+                            10 colourful ways to bring joy into your home
+                        a.button.button--secondary(href="#") Go to post
+                            svg(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M23.219 14.1146L17.495 8.39059L15.6097 10.2759L20.0003 14.6666H6.66699V17.3333H20.0003L15.6097 21.7239L17.495 23.6093L23.219 17.8853C23.7189 17.3852 23.9998 16.707 23.9998 15.9999C23.9998 15.2928 23.7189 14.6147 23.219 14.1146V14.1146Z" fill="currentColor")
+            a.button.button--primary(href="./blog.html") Go to blog page
+
+//- doctype html
+//- html(lang="en")
+//-     head
+//-         meta(charset="UTF-8")
+//-         meta(http-equiv="X-UA-Compatible", content="IE=edge")
+//-         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-         meta(name="description" content="Taburete | Where your home gets the best furniture and becomes a minimalistic sanctuary.")
+//-         // Favicon
+//-         link(rel="shortcut icon" href="./img/logo/favicon.ico" type="image/x-icon")
+//-         title Taburete | Your shop for home
+//-         // CSS Styles
+//-         link(rel="stylesheet" href="./css/styles.css")
+//-         // JavaScript Frontend code
+//-         script(type="module" src="./js/global.js" defer)
+//-     body
+//-         header
+//-             // Navbar
+//-             include includes/navbar.pug
+//-         main
+            
+//-             // CTA section
+//-             include includes/cta-section.pug
+//-             // Footer
+//-             include includes/footer.pug
+            

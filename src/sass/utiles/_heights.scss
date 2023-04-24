@@ -1,0 +1,35 @@
+/* UTILES - HEIGHTS */
+.height {
+  &--md {
+    &--2xs {
+      height: 160px;
+    }
+  }
+
+  /* RESPONSIVENESS */
+  // Landscape
+  @include responsive(xs) {
+  }
+
+  // Tablet
+  @include responsive(sm) {
+    &--tb {
+      &--md {
+        &-xs {
+          height: 240px;
+        }
+      }
+    }
+  }
+
+  // Desktop
+  @include responsive(md) {
+    &--dk {
+      &--md {
+        &-sm {
+          height: 320px;
+        }
+      }
+    }
+  }
+}

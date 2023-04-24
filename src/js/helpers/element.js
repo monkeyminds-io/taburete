@@ -34,7 +34,6 @@ const closeModal = (modal, overlay) => {
   overlay.classList.add("hidden");
 };
 
-// TODO Validate data in form!!
 /**
  * Used to check if an input is emapty
  *  -> TRUE = NOT EMPTY
@@ -76,10 +75,43 @@ const displayValidationFeedback = (input, feedback, isValid) => {
   }
 };
 
+/**
+ * Used to reveal an element
+ * @param {HTMLElement} element
+ */
+const reveal = (element) => {
+  element.classList.remove("hide");
+};
+
+/**
+ * Used to hide an element
+ * @param {HTMLElement} element
+ */
+const hide = (element) => {
+  element.classList.add("hide");
+};
+
+/**
+ * Used to clone an element
+ * @param {HTMLElement} element
+ * @returns
+ */
+const clone = (element) => {
+  reveal(element);
+  const clone = element.cloneNode(true);
+  clone.setAttribute("data-template", "false");
+  element.parentElement.insertBefore(clone, element);
+  hide(element);
+  return clone;
+};
+
 export {
   displayModal,
   closeModal,
   isInputNotEmpty,
   isEmailValid,
   displayValidationFeedback,
+  reveal,
+  hide,
+  clone,
 };

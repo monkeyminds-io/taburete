@@ -29,6 +29,22 @@ h3 {
   font-size: font-size("h3");
 }
 
+/* RESPONSIVENESS */
+// Landscape
+@include responsive(xs) {
+}
+
+// Tablet
+@include responsive(sm) {
+  h1 {
+    font-size: font-size("h1-tb");
+  }
+}
+
+// Desktop
+@include responsive(md) {
+}
+
 /* Text */
 .text {
   &--small {

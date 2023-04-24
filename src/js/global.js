@@ -41,3 +41,12 @@ const overlay = document.querySelector('[data-component="overlay"]');
 newsletterForm != null
   ? initNewsletterForm(newsletterForm, newsletterModal, overlay)
   : null;
+
+// DROP DOWNS FUNCTIONALITY ////////////////
+import { initDropDown } from "./components/drop-down.js";
+const dropDowns = document.querySelectorAll('[data-element="drop-down"]');
+dropDowns != null
+  ? dropDowns.forEach((dropDown) => {
+      initDropDown(dropDown);
+    })
+  : null;
