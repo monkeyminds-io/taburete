@@ -112,8 +112,8 @@ const sortByHigherPrice = (products) => {
 };
 
 // LOGIC ////////////////
-// fetchJson("https://taburete.minimaldesigns.ie/data/products.json").then(
-fetchJson("/dist/data/products.json").then((response) => {
+fetchJson("https://taburete.minimaldesigns.ie/data/products.json").then(
+// fetchJson("/dist/data/products.json").then((response) => {
   let products = response.data.products;
   const params = getSearchParams();
   if (params.has("order")) {
