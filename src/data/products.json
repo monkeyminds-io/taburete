@@ -96,17 +96,220 @@
       {
         "name": "SMEDSTORP",
         "price": "799.00",
-        "category": "living room",
+        "category": "living-room",
         "shortDescription": "A sofa for those who like soft shapes of the past, but want modern comfort. Enjoy resilient foam cushions, comfortable armrests and cone-shaped legs in a lovely retro style that lasts for many years.",
         "longDescription": "Just as nice to look at from all sides – perfect to place in the middle of the room or use as a room divider. High resilience foam makes the sofa soft and cosy, while it also gives comfortable support for your body and quickly regains its shape when you stand up. This comfortable sofa has pocket spring seat cushions with high resilience foam and a top layer of wadding. It provides a nice comfort and support for your body while maintaining the shape of the seat cushions. High resilience foam in seat for extra great comfort. High legs make it easy to clean the floor under the sofa. The durable, easy-care fabric Viarp is woven from cotton and recycled polyester, which reduces the risk of pilling – and its mélange effect makes it less sensitive to stains. 10 year guarantee. Read about the terms in the guarantee brochure.",
         "designer": "Joe Doe",
         "images": {
-          "image_1": "./img/products/bedroom/blakullen/image-1.webp",
-          "image_2": "./img/products/bedroom/blakullen/image-2.webp",
-          "image_3": "./img/products/bedroom/blakullen/image-3.webp",
-          "image_4": "./img/products/bedroom/blakullen/image-4.webp"
+          "image_1": "./img/products/living-room/smedstorp/image-1.webp",
+          "image_2": "./img/products/living-room/smedstorp/image-2.webp",
+          "image_3": "./img/products/living-room/smedstorp/image-3.webp",
+          "image_4": "./img/products/living-room/smedstorp/image-4.webp"
+        },
+        "rate": "5"
+      },
+      {
+        "name": "VEDBO",
+        "price": "250.00",
+        "category": "living-room",
+        "shortDescription": "Soft but distinct lines creates an elegant profile. The armchairs nicely curved back gives your lumbar region good support. And covers in earthy colours provide natural warmth and beauty to the room.",
+        "longDescription": "The timeless design of VEDBO makes it easy to place in various room settings and match with other furniture. VEDBO armchair is ideal when you want to relax in your own space in an open environment, yet still want the opportunity to socialise with others when you like. VEDBO comes in 3 different earthy colours, adding beauty to any room. 10 year guarantee. Read about the terms in the guarantee brochure.",
+        "designer": "Francis Cayouette",
+        "images": {
+          "image_1": "./img/products/living-room/vedbo/image-1.webp",
+          "image_2": "./img/products/living-room/vedbo/image-2.webp",
+          "image_3": "./img/products/living-room/vedbo/image-3.webp",
+          "image_4": "./img/products/living-room/vedbo/image-4.webp"
+        },
+        "rate": "4"
+      },
+      {
+        "name": "BILLY",
+        "price": "135.00",
+        "category": "living-room",
+        "shortDescription": "It is estimated that every five seconds, one BILLY bookcase is sold somewhere in the world. Pretty impressive considering we launched BILLY in 1979. It’s the booklovers choice that never goes out of style.",
+        "longDescription": "Adjustable shelves; adapt space between shelves according to your needs.",
+        "designer": "Gillis Lundgren",
+        "images": {
+          "image_1": "./img/products/living-room/billy/image-1.webp",
+          "image_2": "./img/products/living-room/billy/image-2.webp",
+          "image_3": "./img/products/living-room/billy/image-3.webp"
+        },
+        "rate": "2"
+      },
+      {
+        "name": "BESTÅ / EKET",
+        "price": "510.00",
+        "category": "living-room",
+        "shortDescription": "BESTÅ TV storage combinations provide a home for your TV and storage for the gadgets you need for all the activities around it. Hide the clutter and display your favourite things in one magnificent combo!",
+        "longDescription": "Hide or display your things by combining open and closed storage. It’s easy to keep the cables from your TV and other devices out of sight but close at hand, as there are several cable outlets at the back of the TV bench. The drawers close silently and softly, thanks to the integrated soft-closing function.",
+        "designer": "Jon Karlsson",
+        "images": {
+          "image_1": "./img/products/living-room/besta-eket/image-1.webp",
+          "image_2": "./img/products/living-room/besta-eket/image-2.webp",
+          "image_3": "./img/products/living-room/besta-eket/image-3.webp",
+          "image_4": "./img/products/living-room/besta-eket/image-4.webp"
         },
         "rate": "3"
+      },
+      {
+        "name": "GURLI",
+        "price": "12.00",
+        "category": "living-room",
+        "shortDescription": "Easy to keep clean as it can be washed in a machine.",
+        "longDescription": "",
+        "designer": "Joe Doe",
+        "images": {
+          "image_1": "./img/products/living-room/gurli/image-1.webp",
+          "image_2": "./img/products/living-room/gurli/image-2.webp",
+          "image_3": "./img/products/living-room/gurli/image-3.webp"
+        },
+        "rate": "5"
+      },
+      {
+        "name": "LANGSTED",
+        "price": "65.00",
+        "category": "living-room",
+        "shortDescription": "Place one in every room, or place several in one room. This soft rug comes in different colours and sizes. Mix and match as you like or why not place a few rugs together to make one bigger rug?",
+        "longDescription": "The cut edges makes it easy to join several rugs to create a bigger rug. Place several rugs of your favourite colour together – or mix colours. Durable and will not shed since the rug is made of polypropylene. The rug will last a long time since it is stain-resistant and easy to care for.",
+        "designer": "Maja Ganszyniec",
+        "images": {
+          "image_1": "./img/products/living-room/langsted/image-1.webp",
+          "image_2": "./img/products/living-room/langsted/image-2.webp",
+          "image_3": "./img/products/living-room/langsted/image-3.webp",
+          "image_4": "./img/products/living-room/langsted/image-4.webp"
+        },
+        "rate": "4"
+      },
+      {
+        "name": "SEGERÖN / TEGELÖN",
+        "price": "716.00",
+        "category": "garden",
+        "shortDescription": "Create a dining or lounging area for your balcony, patio, terrace or garden. The flexible SEGERÖN outdoor furniture series is designed for outdoor life and all types of weather, climates and activities.",
+        "longDescription": "The hole in the middle of the table top keeps your parasol in place. TEGELÖN outdoor dining chair is durable and easy to care for, also when placed outdoors since it’s made of a powder-coated steel frame and its seat is made of rope. You can sit comfortably for a long time at the table since the angle of the backrest provides good lumbar support. You can have several chairs on hand without taking up more room, as they are stackable.",
+        "designer": "Maja Ganszyniec",
+        "images": {
+          "image_1": "./img/products/garden/segeron-tegelon/image-1.webp",
+          "image_2": "./img/products/garden/segeron-tegelon/image-2.webp",
+          "image_3": "./img/products/garden/segeron-tegelon/image-3.webp",
+          "image_4": "./img/products/garden/segeron-tegelon/image-4.webp"
+        },
+        "rate": "4"
+      },
+      {
+        "name": "KOLBJÖRN",
+        "price": "179.00",
+        "category": "garden",
+        "shortDescription": "This spacious high cabinet has plenty of shelves for tools and plant pots. There is also a clothes rail where you can hang outdoor cushions to protect them from the weather. Both practical and smart.",
+        "longDescription": "Suitable for both indoor and outdoor use. The cabinet is durable, easy to clean and protected from rust since it is made of powder-coated galvanised steel. Can stay out in the rain, since it has holes in the bottom for water to drain through. The shelves have small holes where water can run through – perfect if your things are wet when storing them in the cabinet. If you want to protect your outdoor cushions from sun, rain and dirt, you can hang them on the clothes rail. Also stands steady on an uneven floor since the feet can be adjusted.",
+        "designer": "Joe Doe",
+        "images": {
+          "image_1": "./img/products/garden/kolbjorn/image-1.webp",
+          "image_2": "./img/products/garden/kolbjorn/image-2.webp",
+          "image_3": "./img/products/garden/kolbjorn/image-3.webp",
+          "image_4": "./img/products/garden/kolbjorn/image-4.webp"
+        },
+        "rate": "5"
+      },
+      {
+        "name": "SOMMARLÅNKE",
+        "price": "17.00",
+        "category": "garden",
+        "shortDescription": "With a battery-powered lighting chain, you transform your balcony or terrace into an inviting place to socialise and relax. Choose a favourite and feel free to combine with matching table and floor lamps.",
+        "longDescription": "Gives a nice decorative light. Convenient and easy to use, since the built-in timer automatically turns on the light at the same time every day and then makes it shine for 6 hours. By dimming the lighting, you change the mood in the room while saving energy. Easy to place anywhere as it is battery operated and does not need to be connected to the mains supply. Suitable for both indoor and outdoor use.",
+        "designer": "Joe Doe",
+        "images": {
+          "image_1": "./img/products/garden/sommarlanke/image-1.webp",
+          "image_2": "./img/products/garden/sommarlanke/image-2.webp",
+          "image_3": "./img/products/garden/sommarlanke/image-3.webp",
+          "image_4": "./img/products/garden/sommarlanke/image-4.webp"
+        },
+        "rate": "2"
+      },
+      {
+        "name": "SEGERÖN",
+        "price": "264.00",
+        "category": "garden",
+        "shortDescription": "Create a dining or lounging area for your balcony, patio, terrace or garden. The flexible SEGERÖN outdoor furniture series is designed for outdoor life and all types of weather, climates and activities.",
+        "longDescription": "This product is durable and easy to care for, since it’s made of a powder-coated steel frame and rope that is handwoven onto the product. The back can be adjusted to five different positions. Wheels make it easy to move. You can just shake off water from a light rain, as the cushion cover is water repellent. The cushion color stays fresh longer as the cover is fade resistant. The cushion cover is easy to keep clean and fresh, as you can take it off and machine-wash it. When your mood changes, you can quickly change the look of your outdoor space with the separate FRÖSÖN covers.",
+        "designer": "Joe Doe",
+        "images": {
+          "image_1": "./img/products/garden/segeron/image-1.webp",
+          "image_2": "./img/products/garden/segeron/image-2.webp",
+          "image_3": "./img/products/garden/segeron/image-3.webp",
+          "image_4": "./img/products/garden/segeron/image-4.webp"
+        },
+        "rate": "1"
+      },
+      {
+        "name": "VOXLÖV / VOXLÖV",
+        "price": "699.00",
+        "category": "dining",
+        "shortDescription": "A gift from nature, shaped and bent for optimal beauty and comfort. The sturdy table and chair frames are made of hardwearing bamboo and the handwoven paper twine gives a strong seat with a resilient feel.",
+        "longDescription": "The angled back of the chair as well as generously sized and curved seat/back offer restful support and comfort while eating, writing or doing paperwork. The chair is made of strong handwoven paper twine and durable bamboo from more sustainable sources, adding warmth and natural beauty wherever you choose to use it. Paper twine weaving technique has been used for years in furniture making and is known for its great strength as well as the supportive, flexible feeling when you sit in it. You can comfortably seat people at the shorter sides of the table as there are no legs that get in the way. The smooth bamboo surface is easy to wipe clean and care for.",
+        "designer": "Joe Doe",
+        "images": {
+          "image_1": "./img/products/dining/voxlov-voxlov/image-1.webp",
+          "image_2": "./img/products/dining/voxlov-voxlov/image-2.webp",
+          "image_3": "./img/products/dining/voxlov-voxlov/image-3.webp",
+          "image_4": "./img/products/dining/voxlov-voxlov/image-4.webp"
+        },
+        "rate": "3"
+      },
+      {
+        "name": "FÄRGKLAR",
+        "price": "45.00",
+        "category": "dining",
+        "shortDescription": "Your perfect start for many types of meals! FÄRGKLAR dinnerware set comes in a straightforward design, a great base to match with other dinnerware. Choose a matt glazed rustic surface or a glossy modern one.",
+        "longDescription": "The dinnerware’s simple, functional design is easy to coordinate with other colours, shapes or different types of glazing – and makes FÄRGKLAR the perfect base for many occasions.",
+        "designer": "Maria Vinka",
+        "images": {
+          "image_1": "./img/products/dining/fargklar/image-1.webp",
+          "image_2": "./img/products/dining/fargklar/image-2.webp"
+        },
+        "rate": "1"
+      },
+      {
+        "name": "GLADELIG",
+        "price": "12.00",
+        "category": "dining",
+        "shortDescription": "You can also use this small oven dish as a deep plate. The ocean-blue, glazed surface with golden-brown details turns meals into pure joy – and makes it easy to serve in style, direct from oven to table.",
+        "longDescription": "Perfect if you want to serve the food directly from oven to table. Can also be used as a deep plate, for example if you want to serve a gratin or soup. Use as a beautiful eye-catcher or combine with other items in the GLADELIG series to create a matched table setting on both weekdays and weekends. Stoneware is a sustainable material that can be a part of your everyday life for many years.",
+        "designer": "N Karlsson/M Axelsson",
+        "images": {
+          "image_1": "./img/products/dining/gladelig/image-1.webp",
+          "image_2": "./img/products/dining/gladelig/image-2.webp",
+          "image_3": "./img/products/dining/gladelig/image-3.webp",
+          "image_4": "./img/products/dining/gladelig/image-4.webp"
+        },
+        "rate": "2"
+      },
+      {
+        "name": "GRÅSALA / ÖSTANÖ",
+        "price": "179.00",
+        "category": "dining",
+        "shortDescription": "This table for 2 blends a warm wood expression with sturdy metal in a slim design that’s pleasing to the eye even in smaller spaces. Pair it with SANDSBERG chair to create a welcoming and coordinated look.",
+        "longDescription": "Sturdy metal table frame and durable, smooth melamine tabletop. The armless silhouette allows you to push these chairs right up to your table and save on floor space. A slim design that blends in without taking up too much visual space in the room, yet sturdy enough to hold up to everyday activities. With sofa-comfort feel, this chair can also serve as cosy extra seating in your bedroom, hallway, living room or wherever you would like a comfy spot to relax without taking up too much space. You can sit comfortably for a long time at the table since the angle of the backrest provides good lumbar support. Upholstered chair seat distributes your body weight and reduces pressure on the sitting bone. The chair stands firmly in place thanks to the metal underframe.",
+        "designer": "N Karlsson",
+        "images": {
+          "image_1": "./img/products/dining/grasala-ostano/image-1.webp",
+          "image_2": "./img/products/dining/grasala-ostano/image-2.webp"
+        },
+        "rate": "3"
+      },
+      {
+        "name": "GRÖNSAKER",
+        "price": "19.00",
+        "category": "dining",
+        "shortDescription": "The stylish GRÖNSAKER bowl is perfect for all types of food and for every meal. Made of durable bamboo, its simple lines and wood finish make it a modern twist that looks great in any home.",
+        "longDescription": "You can serve all kinds of food in this bowl, from salads to pasta dishes. The stylish design with simple lines and a wooden finish makes it an eye-catcher on all tables and for all occasions. Made of bamboo which is a sustainable and durable material that is easy to clean and take care of.",
+        "designer": "Friso Wiersma",
+        "images": {
+          "image_1": "./img/products/dining/gronsaker/image-1.webp",
+          "image_2": "./img/products/dining/gronsaker/image-2.webp",
+          "image_3": "./img/products/dining/gronsaker/image-3.webp"
+        },
+        "rate": "1"
       }
     ]
   }
