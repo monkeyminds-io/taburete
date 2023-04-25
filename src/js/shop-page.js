@@ -16,7 +16,7 @@ import { fetchJson } from "./helpers/data.js";
 const templateCard = document.querySelector('[data-template="true"]');
 
 // FUNCTIONS ////////////////
-const setProductCards = (product) => {
+const setProductCard = (product) => {
   const cloneCard = clone(templateCard);
   const productLink = cloneCard.querySelector('[data-element="product-link"]');
   const image = productLink.querySelector("img");
@@ -39,7 +39,7 @@ fetchJson("https://taburete.minimaldesigns.ie/data/products.json").then(
   (response) => {
     const products = response.data.products;
     products.forEach((product) => {
-      setProductCards(product);
+      setProductCard(product);
     });
   }
 );
