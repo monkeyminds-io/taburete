@@ -22,9 +22,8 @@ const paths = {
   },
 };
 
-// TODO Add pug loader
 module.exports = {
-  mode: "development", // TODO set to production when publishing
+  mode: "production",
   entry: {
     global: [paths.src.js + "global.js", paths.src.sass + "styles.scss"],
     "shop-page": paths.src.js + "shop-page.js",
