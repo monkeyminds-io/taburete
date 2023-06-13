@@ -112,53 +112,53 @@ const sortByHigherPrice = (products) => {
 };
 
 // LOGIC ////////////////
-fetchJson("https://taburete.minimaldesigns.ie/data/products.json").then(
-  (response) => {
-    let products = response.data.products;
-    const params = getSearchParams();
-    if (params.has("order")) {
-      switch (params.get("order")) {
-        case "most-popular":
-          products = sortByPopularity(products);
+fetchJson("https://taburete.minimaldesigns.ie/data/products.json", {
+  mode: "no-cors",
+}).then((response) => {
+  let products = response.data.products;
+  const params = getSearchParams();
+  if (params.has("order")) {
+    switch (params.get("order")) {
+      case "most-popular":
+        products = sortByPopularity(products);
+        break;
+      case "a-z":
+        products = sortByNameAZ(products);
+        break;
+      case "z-a":
+        products = sortByNameZA(products);
+        break;
+      case "lower-price":
+        products = sortByLowerPrice(products);
+        break;
+      case "higher-price":
+        products = sortByHigherPrice(products);
+        break;
+    }
+  } else {
+    products = sortByPopularity(products);
+  }
+  products.forEach((product) => {
+    if (params.has("category")) {
+      switch (params.get("category")) {
+        case "all":
+          setProductCard(product);
           break;
-        case "a-z":
-          products = sortByNameAZ(products);
+        case "bedroom":
+          if (product.category === "bedroom") setProductCard(product);
           break;
-        case "z-a":
-          products = sortByNameZA(products);
+        case "living-room":
+          if (product.category === "living-room") setProductCard(product);
           break;
-        case "lower-price":
-          products = sortByLowerPrice(products);
+        case "garden":
+          if (product.category === "garden") setProductCard(product);
           break;
-        case "higher-price":
-          products = sortByHigherPrice(products);
+        case "dining":
+          if (product.category === "dining") setProductCard(product);
           break;
       }
     } else {
-      products = sortByPopularity(products);
+      setProductCard(product);
     }
-    products.forEach((product) => {
-      if (params.has("category")) {
-        switch (params.get("category")) {
-          case "all":
-            setProductCard(product);
-            break;
-          case "bedroom":
-            if (product.category === "bedroom") setProductCard(product);
-            break;
-          case "living-room":
-            if (product.category === "living-room") setProductCard(product);
-            break;
-          case "garden":
-            if (product.category === "garden") setProductCard(product);
-            break;
-          case "dining":
-            if (product.category === "dining") setProductCard(product);
-            break;
-        }
-      } else {
-        setProductCard(product);
-      }
-    });
-  }
-);
+  });
+});
